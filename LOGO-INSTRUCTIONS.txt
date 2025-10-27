@@ -1,0 +1,38 @@
+📝 INSTRUCTIONS POUR LE LOGO
+============================
+
+Le site est configuré pour utiliser le fichier "logoweb.png" comme logo.
+
+OPTION 1 - Utiliser votre logo (RECOMMANDÉ)
+--------------------------------------------
+1. Placez votre fichier "logoweb.png" dans ce dossier
+2. Assurez-vous qu'il a un fond transparent
+3. Dimensions recommandées : environ 200x80 pixels (ou ratio similaire)
+4. Ouvrez index.html dans votre navigateur
+
+OPTION 2 - Utiliser le logo placeholder temporaire
+---------------------------------------------------
+Si vous n'avez pas encore votre logo, vous pouvez utiliser le placeholder SVG :
+
+1. Ouvrez "index.html" dans un éditeur de texte
+2. Remplacez toutes les occurrences de "logoweb.png" par "logo-placeholder.svg"
+   (Il y en a 2 : une dans le header et une dans le footer)
+3. Sauvegardez et ouvrez dans votre navigateur
+
+OPTION 3 - Créer un PNG à partir du logo fourni
+------------------------------------------------
+Si vous avez un fichier logo dans un autre format (.jpg, .svg, etc.) :
+
+1. Ouvrez-le dans un éditeur d'image (Photoshop, GIMP, Illustrator, etc.)
+2. Exportez-le en PNG avec fond transparent
+3. Nommez-le "logoweb.png"
+4. Placez-le dans ce dossier
+
+NOTE : Le CSS applique automatiquement un effet de glow (lueur) au logo 
+pour correspondre à l'ambiance néon du site.
+
+Pour tester rapidement le site sans logo :
+------------------------------------------
+Le site affichera simplement une image manquante, mais toutes les animations 
+et le reste du contenu fonctionneront normalement.
+

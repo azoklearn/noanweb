@@ -1,0 +1,383 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║           ✨ CHANGEMENTS POLICE + LOGO TEXTE NÉON ✨                 ║
+║        Montserrat + NOANWEB en Rubik 80's Fade néon blanc           ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+🔤 CHANGEMENTS APPLIQUÉS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. 🆕 NOUVELLE POLICE : MONTSERRAT
+   ────────────────────────────────
+   
+   AVANT : Bebas Neue (titres)
+   APRÈS : Montserrat (titres)
+   
+   → Police moderne, élégante et professionnelle
+   → Proche de "Nova" (Proxima Nova)
+   → Gratuite sur Google Fonts
+   → Weights : 300, 400, 500, 600, 700, 800
+   
+   APPLIQUÉE SUR :
+   ✅ Tous les titres (H1-H6)
+   ✅ Titre Hero principal
+   ✅ Titres de sections
+   ✅ Cartes raisons
+   ✅ Animation reveal
+
+
+2. 🚫 LOGOS PNG SUPPRIMÉS
+   ─────────────────────
+   
+   SUPPRIMÉS :
+   ❌ logo-placeholder.png (header)
+   ❌ logo-placeholder.png (footer)
+   ❌ Logo/spinner du preloader
+   
+   REMPLACÉS PAR :
+   ✅ Texte "NOANWEB" en Rubik 80's Fade
+
+
+3. ✨ NOUVEAU LOGO TEXTE "NOANWEB"
+   ──────────────────────────────
+   
+   POLICE : Rubik 80's Fade
+   COULEUR : Blanc néon (#fff)
+   EFFET : Néon pulsant blanc
+   
+   3 EMPLACEMENTS :
+   
+   A. HEADER (.logo-text)
+      → Taille : clamp(1.5rem, 3vw, 2rem)
+      → Position : Centre du header
+      → Effet néon pulsant
+   
+   B. FOOTER (.logo-text-footer)
+      → Taille : clamp(2rem, 4vw, 3rem)
+      → Position : Haut du footer
+      → Effet néon pulsant
+   
+   C. PRELOADER (.logo-preloader)
+      → Taille : clamp(3rem, 6vw, 5rem)
+      → Position : Centre de l'écran
+      → Effet néon pulsant plus prononcé
+
+
+═════════════════════════════════════════════════════════════════════
+
+🎨 EFFET NÉON BLANC DÉTAILLÉ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEXT-SHADOW (4 couches)
+───────────────────────
+
+Couche 1 : 0 0 10px rgba(255, 255, 255, 0.8)  → Lueur proche
+Couche 2 : 0 0 20px rgba(255, 255, 255, 0.6)  → Lueur moyenne
+Couche 3 : 0 0 30px rgba(255, 255, 255, 0.4)  → Lueur étendue
+Couche 4 : 0 0 40px rgba(255, 255, 255, 0.3)  → Halo externe
+
+
+ANIMATION "neonPulse"
+─────────────────────
+
+→ Durée : 2 secondes
+→ Easing : ease-in-out
+→ Loop : Infini
+
+0% et 100% :
+   Intensité normale (opacité 0.3 à 0.8)
+
+50% :
+   Intensité maximale (opacité 0.4 à 1.0)
+   Lueur plus large (10px → 15px, 40px → 60px)
+
+→ Crée un effet de pulsation douce et hypnotique
+
+
+TYPOGRAPHIE
+───────────
+
+→ Font-family : 'Rubik 80s Fade'
+→ Font-weight : 400 (normal)
+→ Color : #fff (blanc pur)
+→ Text-transform : UPPERCASE
+→ Letter-spacing : 0.1em (bien espacé)
+
+
+═════════════════════════════════════════════════════════════════════
+
+📝 TYPOGRAPHIE FINALE DU SITE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌──────────────────────────────────────────────────────────────┐
+│  MONTSERRAT (Titres et headings)                            │
+├──────────────────────────────────────────────────────────────┤
+│  → H1, H2, H3, H4, H5, H6                                    │
+│  → Titre Hero                                                │
+│  → Titres de sections                                        │
+│  → Font-weight : 700-800 (bold/extra-bold)                   │
+│  → Style : Moderne, clean, professionnel                     │
+│  → Source : Google Fonts (gratuit)                           │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│  RUBIK 80'S FADE (Logo uniquement)                          │
+├──────────────────────────────────────────────────────────────┤
+│  → "NOANWEB" header                                          │
+│  → "NOANWEB" footer                                          │
+│  → "NOANWEB" preloader                                       │
+│  → Font-weight : 400                                         │
+│  → Style : Rétro 80's avec effet fade vertical              │
+│  → Effet : Néon blanc pulsant                                │
+│  → Source : Google Fonts (gratuit)                           │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│  INTER (Corps de texte)                                      │
+├──────────────────────────────────────────────────────────────┤
+│  → Paragraphes, descriptions                                 │
+│  → Boutons, liens                                            │
+│  → Font-weight : 300-700                                     │
+│  → Style : Lisible, versatile, moderne                       │
+│  → Source : Google Fonts (gratuit)                           │
+└──────────────────────────────────────────────────────────────┘
+
+
+HIÉRARCHIE VISUELLE
+───────────────────
+
+1. Logo "NOANWEB" (Rubik 80's Fade + néon)
+   → Identité visuelle forte et mémorable
+
+2. Titres (Montserrat bold)
+   → Structure et organisation du contenu
+
+3. Texte (Inter)
+   → Lisibilité et confort de lecture
+
+
+═════════════════════════════════════════════════════════════════════
+
+💻 CODE TECHNIQUE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HTML (Structure)
+────────────────
+
+HEADER :
+<a href="#" class="logo-link">
+    <div class="logo-text">NOANWEB</div>
+</a>
+
+FOOTER :
+<div class="footer-logo">
+    <div class="logo-text-footer">NOANWEB</div>
+</div>
+
+PRELOADER :
+<div class="preloader-content">
+    <div class="logo-preloader">NOANWEB</div>
+</div>
+
+
+CSS (Styles)
+────────────
+
+.logo-text,
+.logo-text-footer,
+.logo-preloader {
+    font-family: 'Rubik 80s Fade', cursive;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.3);
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% { /* État normal */ }
+    50% { /* État lumineux */ }
+}
+
+
+FONTS (Google Fonts)
+────────────────────
+
+<link href="https://fonts.googleapis.com/css2?family=
+    Montserrat:wght@300;400;500;600;700;800&
+    Rubik+80s+Fade&
+    Inter:wght@300;400;500;600;700
+    &display=swap" rel="stylesheet">
+
+
+═════════════════════════════════════════════════════════════════════
+
+📂 FICHIERS MODIFIÉS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ index.html
+   → Fonts changées (Montserrat + Rubik 80's Fade)
+   → Logos <img> remplacés par texte "NOANWEB"
+   → Preloader spinner supprimé, remplacé par logo texte
+   → 3 instances de logo texte ajoutées
+
+✅ style.css
+   → Police titres : Bebas Neue → Montserrat
+   → Ajout styles .logo-text, .logo-text-footer, .logo-preloader
+   → Effet néon blanc avec animation neonPulse
+   → Suppression styles .loader-spinner
+   → Mise à jour .raison-title (Montserrat)
+   → Mise à jour .reveal (Montserrat)
+
+
+═════════════════════════════════════════════════════════════════════
+
+✨ AVANTAGES DES CHANGEMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 VISUEL
+─────────
+✅ Logo texte néon blanc = identité forte et unique
+✅ Effet rétro 80's moderne et tendance
+✅ Animation pulsante hypnotique
+✅ Contraste parfait sur fond noir
+
+⚡ PERFORMANCE
+─────────────
+✅ Plus de fichiers image à charger
+✅ Texte = meilleur SEO (crawlable)
+✅ Redimensionnement parfait (responsive)
+✅ Poids de page réduit
+
+💼 PROFESSIONNALISME
+────────────────────
+✅ Montserrat = police corporate moderne
+✅ Rubik 80's Fade = originalité et créativité
+✅ Mix parfait entre sérieux et créativité
+✅ Mémorable et impactant
+
+📱 RESPONSIVE
+─────────────
+✅ clamp() pour tailles fluides
+✅ S'adapte à tous les écrans
+✅ Toujours lisible et proportionné
+✅ Pas de problème de résolution d'image
+
+
+═════════════════════════════════════════════════════════════════════
+
+🔧 PERSONNALISATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CHANGER L'INTENSITÉ DU NÉON
+────────────────────────────
+
+Dans style.css, modifier les valeurs rgba() :
+
+Plus intense :
+text-shadow: 
+    0 0 20px rgba(255, 255, 255, 1),
+    0 0 40px rgba(255, 255, 255, 0.9),
+    0 0 60px rgba(255, 255, 255, 0.7),
+    0 0 80px rgba(255, 255, 255, 0.5);
+
+Plus subtil :
+text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.1);
+
+
+CHANGER LA VITESSE DE PULSATION
+────────────────────────────────
+
+Dans style.css :
+animation: neonPulse 2s ease-in-out infinite;
+                     ↑
+             Plus rapide : 1s
+             Plus lent : 3s ou 4s
+
+
+DÉSACTIVER L'ANIMATION
+──────────────────────
+
+Retirer la ligne :
+animation: neonPulse 2s ease-in-out infinite;
+
+→ Le néon reste statique sans pulsation
+
+
+═════════════════════════════════════════════════════════════════════
+
+🚀 RÉSULTAT FINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ Logo "NOANWEB" en néon blanc pulsant
+✨ Police Montserrat moderne pour les titres
+✨ Police Rubik 80's Fade rétro pour le logo
+✨ Effet néon sophistiqué et hypnotique
+✨ Identité visuelle forte et mémorable
+✨ Performance optimisée (pas d'images)
+✨ 100% responsive et SEO-friendly
+
+
+AVANT → APRÈS
+─────────────
+Bebas Neue          → Montserrat (titres)
+Logo PNG            → Texte "NOANWEB" (Rubik 80's Fade)
+Pas d'effet         → Néon blanc pulsant
+Fichiers images     → Texte pur (SEO++)
+Style basique       → Style rétro 80's moderne
+
+
+═════════════════════════════════════════════════════════════════════
+
+📍 POUR VOIR LE RÉSULTAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd /Users/marinezablot/noan-web
+python3 -m http.server 8000
+
+Puis ouvrez : http://localhost:8000
+
+→ Observez le logo "NOANWEB" qui pulse doucement
+→ L'effet néon blanc est subtil mais très élégant
+→ Le preloader affiche maintenant le logo texte
+
+
+💡 DÉTAILS TECHNIQUES
+─────────────────────
+
+Le logo "NOANWEB" utilise :
+• 4 couches de text-shadow pour créer la profondeur
+• Animation keyframes pour la pulsation
+• Rubik 80's Fade qui a déjà un dégradé vertical
+• Combinaison = effet néon rétro-futuriste unique
+
+
+═══════════════════════════════════════════════════════════════════
+
+       ✨ CHANGEMENTS APPLIQUÉS AVEC SUCCÈS ! ✨
+
+     Montserrat (titres) + NOANWEB néon blanc (logo)
+          Style moderne et professionnel avec touche rétro
+
+═══════════════════════════════════════════════════════════════════
+
+Questions ? Consultez :
+- NOUVELLES-FONCTIONNALITES.txt
+- SIMPLIFICATION-FINALE.txt
+- POLICE-BEBAS-NEUE.txt
+
+Instagram : @noan.web
+Téléphone : 07 66 87 39 15
+Nancy, France 🇫🇷
+
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,239 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║         🎨 NOAN WEB - VERSION NOIR & BLANC + RUBIK 80'S FADE 🎨      ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+✅ MODIFICATIONS APPLIQUÉES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 1. POLICE CHANGÉE : RUBIK 80'S FADE
+───────────────────────────────────────
+✅ Remplacé "Oswald" par "Rubik 80s Fade"
+✅ Remplacé "Plus Jakarta Sans" par "Rubik 80s Fade"
+✅ Appliqué sur tous les titres (h1-h6)
+✅ Appliqué sur le corps de texte
+✅ Appliqué sur les animations reveal
+✅ Appliqué sur le texte circulaire (showreel)
+
+→ Font-weight ajusté à 400 pour Rubik 80's Fade
+
+
+🎨 2. PALETTE NOIR & BLANC PURE
+───────────────────────────────
+AVANT → APRÈS
+─────────────
+Bleu #142DEB   → Blanc #ffffff / Gris #2a2a2a
+Rose #FFABE7   → Blanc #ffffff / Gris #1a1a1a
+Rouge #E30C00  → Noir #0a0a0a
+Gris #0D0E1D   → Noir #000000
+
+
+📦 3. SECTIONS MODIFIÉES
+────────────────────────
+✅ PRELOADER
+   Screen 1: #000000 (noir pur)
+   Screen 2: #333333 (gris foncé)
+   Screen 3: #666666 (gris moyen)
+   Screen 4: #ffffff (blanc pur)
+
+✅ HERO SECTION
+   Background: gradient(#000 → #1a1a1a)
+
+✅ STATS SECTION
+   Background: #000000
+   Compteurs: couleur #ffffff
+
+✅ SECTION COMMUNICATION
+   Background image: overlay #1a1a1a
+   Background texte: #000000
+
+✅ SECTION "FEUILLE DE ROUTE"
+   Background: #1a1a1a (gris très foncé)
+   Texte: blanc
+
+✅ SECTION PRESTATIONS
+   Background: #000000
+   Cartes: bordure blanche au hover
+   Tags: background blanc, texte noir
+
+✅ SECTION CTA
+   Background: #2a2a2a (gris foncé)
+
+✅ FOOTER
+   Background: #0a0a0a (noir profond)
+
+
+🎯 4. ÉLÉMENTS INTERACTIFS
+───────────────────────────
+✅ BOUTONS
+   - Bordure: blanc
+   - Hover: fond blanc, texte noir
+   - Effet marquee: conservé
+
+✅ CARTES PRESTATIONS
+   - Bordure hover: blanc
+   - Box-shadow: blanc rgba(255,255,255,0.2)
+   - Shine effect: conservé
+
+✅ MENU OVERLAY
+   - Liens hover: gris clair #cccccc
+   - Background: noir pur
+
+✅ HEADER
+   - Téléphone hover: gris #cccccc
+   - Background: rgba(0,0,0,0.5) + blur
+
+✅ TAGS
+   - Background: blanc
+   - Texte: noir
+   - Border-radius: conservé
+
+
+⚡ 5. ANIMATIONS CONSERVÉES
+──────────────────────────
+✅ Preloader avec écrans rotatifs
+✅ Reveal mot par mot (Hero)
+✅ Compteurs effet slot machine
+✅ Bouton showreel magnétique
+✅ Boutons marquee (défilement texte)
+✅ Menu hamburger animé
+✅ Cartes avec shine effect
+✅ Smooth scroll
+✅ Parallax
+✅ Effet glitch sur sélection (noir/blanc)
+
+
+🎨 RÉSUMÉ PALETTE FINALE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COULEURS UTILISÉES :
+────────────────────
+⚫ #000000 - Noir pur (fonds principaux)
+⚫ #0a0a0a - Noir profond (footer)
+⚫ #1a1a1a - Gris très foncé (sections)
+⚫ #2a2a2a - Gris foncé (sections CTA)
+⚫ #333333 - Gris foncé (preloader)
+⚫ #666666 - Gris moyen (preloader)
+⚫ #cccccc - Gris clair (hover)
+⚪ #ffffff - Blanc pur (texte, accents)
+
+
+💻 TYPOGRAPHIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 POLICE UNIQUE : Rubik 80's Fade
+──────────────────────────────────
+→ Titres H1-H6
+→ Corps de texte
+→ Boutons
+→ Menu
+→ Animations
+→ Tous les éléments du site
+
+→ Fallback: Arial, sans-serif
+→ Font-weight: 400 (normal)
+→ Style: Rétro années 80 avec effet fade/dégradé
+
+
+🔥 EFFET VISUEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+La police Rubik 80's Fade apporte :
+✨ Style rétro années 80
+✨ Effet de dégradé vertical naturel
+✨ Look "néon fade" authentique
+✨ Cohérence visuelle totale
+✨ Ambiance vintage/moderne
+
+Associée au noir & blanc :
+✨ Contraste maximal
+✨ Lisibilité optimale
+✨ Design élégant et intemporel
+✨ Effet "néon monochrome"
+
+
+📂 FICHIERS MODIFIÉS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ index.html
+   → Google Fonts link changé
+   → Import "Rubik 80s Fade"
+
+✅ style.css
+   → Font-family changée partout
+   → Toutes les couleurs remplacées
+   → Palette noir/blanc/gris
+   → Conservé toutes les animations
+
+✅ script.js
+   → Couleurs glitch effect modifiées
+   → Noir/blanc au lieu de rouge/bleu
+
+
+🚀 RÉSULTAT FINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AVANT :
+───────
+✨ Design coloré (bleu, rose, rouge)
+✨ Polices Oswald + Plus Jakarta Sans
+✨ Style moderne et dynamique
+
+APRÈS :
+───────
+🎨 Design noir & blanc pur
+🎨 Police Rubik 80's Fade (style rétro 80's)
+🎨 Élégant, intemporel, contrasté
+🎨 Effet "néon monochrome vintage"
+
+
+💡 AVANTAGES DU DESIGN NOIR & BLANC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Élégance et sobriété
+✅ Intemporel et classique
+✅ Contraste maximal = lisibilité parfaite
+✅ Impression professionnelle
+✅ Charge rapide (pas d'images colorées)
+✅ Facilité d'impression
+✅ Focus sur le contenu
+✅ Compatible avec TOUT (logos, images, etc.)
+
+
+🎯 POUR OUVRIR LE SITE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd /Users/marinezablot/noan-web
+python3 -m http.server 8000
+
+Puis ouvrez : http://localhost:8000
+
+
+📝 NOTE SUR LA POLICE RUBIK 80'S FADE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cette police Google Fonts crée naturellement un effet de dégradé 
+vertical sur chaque lettre, donnant un look "néon qui s'éteint" 
+typique des années 80. Associée au noir & blanc, elle crée un 
+effet rétro-futuriste unique et très tendance.
+
+Parfaite pour une agence web qui veut se démarquer avec un 
+style vintage/moderne !
+
+
+═══════════════════════════════════════════════════════════════════════
+
+       🎉 SITE NOAN WEB - VERSION NOIR & BLANC TERMINÉE ! 🎉
+
+          Style rétro 80's avec Rubik 80's Fade
+       Design élégant et intemporel en monochrome
+
+═══════════════════════════════════════════════════════════════════════
+
+Questions ? Consultez README.md ou GUIDE-OUVERTURE.txt
+
+Téléphone : 07 66 87 39 15
+Nancy, France 🇫🇷
+
+═══════════════════════════════════════════════════════════════════════

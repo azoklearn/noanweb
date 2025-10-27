@@ -1,0 +1,170 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              🔄 VIDER LE CACHE DU NAVIGATEUR 🔄                      ║
+║           Pour voir les changements de police                        ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+⚠️ PROBLÈME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Les fichiers ont été modifiés mais le navigateur affiche
+encore l'ancienne version à cause du CACHE.
+
+
+✅ SOLUTIONS (choisissez-en UNE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ RECHARGEMENT FORCÉ (LE PLUS SIMPLE)
+   ────────────────────────────────────
+
+   Sur Mac :
+   → Cmd + Shift + R
+   
+   Sur Windows/Linux :
+   → Ctrl + Shift + R
+   → ou Ctrl + F5
+
+   → Cela force le navigateur à ignorer le cache
+
+
+2️⃣ MODE NAVIGATION PRIVÉE
+   ───────────────────────
+
+   → Ouvrir une fenêtre de navigation privée
+   → Aller sur http://localhost:8000
+   → La navigation privée n'utilise pas le cache
+
+
+3️⃣ VIDER COMPLÈTEMENT LE CACHE
+   ────────────────────────────
+
+   CHROME / EDGE :
+   1. Ouvrir les Outils de développement (F12)
+   2. Clic droit sur le bouton de rafraîchissement
+   3. Choisir "Vider le cache et actualiser"
+
+   SAFARI :
+   1. Cmd + Option + E (vider le cache)
+   2. Cmd + R (rafraîchir)
+
+   FIREFOX :
+   1. Cmd/Ctrl + Shift + Delete
+   2. Cocher "Cache"
+   3. Cliquer "Effacer maintenant"
+
+
+4️⃣ OUTILS DE DÉVELOPPEMENT
+   ─────────────────────────
+
+   1. Ouvrir les DevTools (F12)
+   2. Onglet "Network" ou "Réseau"
+   3. Cocher "Disable cache" ou "Désactiver le cache"
+   4. Garder les DevTools ouverts
+   5. Rafraîchir la page (F5)
+
+
+═════════════════════════════════════════════════════════════════════
+
+🎯 MÉTHODE RECOMMANDÉE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Ouvrir http://localhost:8000
+2. Appuyer sur Cmd + Shift + R (Mac)
+   ou Ctrl + Shift + R (Windows)
+3. Attendre 2-3 secondes
+4. La nouvelle police Space Grotesk devrait apparaître !
+
+
+═════════════════════════════════════════════════════════════════════
+
+🔍 VÉRIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Comment savoir si ça a marché ?
+────────────────────────────────
+
+AVANT (Montserrat) :
+→ Titres avec style corporate sobre
+→ Lettres standard
+
+APRÈS (Space Grotesk) :
+→ Titres avec style géométrique futuriste
+→ Lettres avec formes modernes et arrondies
+→ Look plus "tech" et artistique
+
+
+Exemple de titre :
+VOTRE SITE WEB SUR MESURE À NANCY
+
+→ Si les lettres ont l'air plus géométriques
+   et futuristes, c'est Space Grotesk !
+
+
+═════════════════════════════════════════════════════════════════════
+
+🛠️ SI ÇA NE MARCHE TOUJOURS PAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ARRÊTER LE SERVEUR
+   ──────────────────
+   Dans le terminal : Ctrl + C
+
+
+2. RELANCER LE SERVEUR
+   ───────────────────
+   cd /Users/marinezablot/noan-web
+   python3 -m http.server 8000
+
+
+3. OUVRIR UNE NOUVELLE FENÊTRE
+   ───────────────────────────
+   → Navigation privée / Incognito
+   → Aller sur http://localhost:8000
+
+
+4. VÉRIFIER LA CONSOLE
+   ────────────────────
+   → F12 → Console
+   → Regarder s'il y a des erreurs en rouge
+   → Les erreurs de police apparaissent en rouge
+
+
+═════════════════════════════════════════════════════════════════════
+
+📋 CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+☐ 1. Le serveur est lancé (python3 -m http.server 8000)
+☐ 2. J'ai vidé le cache (Cmd/Ctrl + Shift + R)
+☐ 3. J'ai attendu 2-3 secondes
+☐ 4. La page a été complètement rechargée
+☐ 5. Les titres ont un look géométrique/futuriste
+
+
+═════════════════════════════════════════════════════════════════════
+
+💡 ASTUCE PRO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Pour éviter ce problème à l'avenir :
+────────────────────────────────────
+
+→ Toujours garder les DevTools ouverts (F12)
+→ Activer "Disable cache" dans l'onglet Network
+→ Comme ça, chaque F5 force le rechargement !
+
+
+═══════════════════════════════════════════════════════════════════
+
+       🔄 RECHARGEZ AVEC Cmd + Shift + R ! 🔄
+
+   Le cache est le problème #1 en développement web
+        Forcez le rechargement et ça ira !
+
+═══════════════════════════════════════════════════════════════════
+
+Questions ? La police Space Grotesk est bien installée,
+c'est juste le cache qui bloque l'affichage.
+
+═══════════════════════════════════════════════════════════════════

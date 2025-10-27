@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST POLICE ORBITRON</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+        
+        body {
+            background: #000;
+            color: #fff;
+            padding: 50px;
+            font-family: Arial;
+        }
+        
+        .titre-test {
+            font-family: 'Orbitron', 'Courier New', monospace;
+            font-size: 72px;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin: 50px 0;
+            color: #00ff00;
+        }
+        
+        .titre-normal {
+            font-family: Arial, sans-serif;
+            font-size: 72px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 50px 0;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 style="color: yellow; font-size: 32px;">🔍 TEST POLICE ORBITRON (très futuriste)</h1>
+    
+    <p style="font-size: 20px; line-height: 2;">
+        <strong style="color: #00ff00;">VERT = Orbitron</strong> (futuriste, tech, sci-fi)<br>
+        <strong style="color: #ff0000;">ROUGE = Arial</strong> (standard)<br><br>
+        
+        Les deux textes doivent être TRÈS DIFFÉRENTS :<br>
+        → Orbitron = lettres géométriques, style futuriste<br>
+        → Arial = lettres normales<br><br>
+        
+        Si les 2 textes sont IDENTIQUES, il y a un problème !
+    </p>
+    
+    <hr style="border-color: #666; margin: 50px 0;">
+    
+    <div class="titre-test">NOANWEB</div>
+    
+    <div class="titre-normal">NOANWEB</div>
+    
+    <hr style="border-color: #666; margin: 50px 0;">
+    
+    <p style="font-size: 18px; line-height: 2;">
+        <strong style="color: #00ff00;">✓ SI LE TEXTE VERT EST DIFFÉRENT :</strong><br>
+        → La police Orbitron fonctionne !<br>
+        → Fermez COMPLÈTEMENT votre navigateur<br>
+        → Relancez le serveur : Ctrl+C puis python3 -m http.server 8000<br>
+        → Rouvrez en navigation privée : localhost:8000<br>
+        → Les titres DOIVENT être en Orbitron maintenant !<br><br>
+        
+        <strong style="color: #ff0000;">✗ SI LES 2 TEXTES SONT IDENTIQUES :</strong><br>
+        → Problème de connexion internet<br>
+        → Google Fonts ne charge pas<br>
+        → Vérifiez votre connexion<br>
+        → Appuyez F12 et regardez la Console pour voir les erreurs
+    </p>
+    
+</body>
+</html>
+

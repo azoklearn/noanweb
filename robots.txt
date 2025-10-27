@@ -1,0 +1,12 @@
+# robots.txt - NOAN WEB - Site Web Nancy
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://noanweb.fr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+

@@ -1,0 +1,60 @@
+🚀 COMMENT OUVRIR LE SITE NOAN WEB
+===================================
+
+MÉTHODE 1 : Double-clic (La plus simple)
+-----------------------------------------
+1. Localisez le fichier "index.html" dans ce dossier
+2. Double-cliquez dessus
+3. Il s'ouvrira dans votre navigateur par défaut
+
+MÉTHODE 2 : Glisser-déposer
+----------------------------
+1. Ouvrez votre navigateur (Chrome, Firefox, Safari, Edge)
+2. Glissez-déposez le fichier "index.html" dans la fenêtre du navigateur
+
+MÉTHODE 3 : Serveur local avec Python (recommandé pour le développement)
+--------------------------------------------------------------------------
+Ouvrez un terminal dans ce dossier et tapez :
+
+    python3 -m http.server 8000
+
+Puis ouvrez votre navigateur et allez à : http://localhost:8000
+
+MÉTHODE 4 : Serveur local avec Node.js
+---------------------------------------
+Si vous avez Node.js installé :
+
+    npx http-server
+
+Puis suivez les instructions affichées dans le terminal.
+
+MÉTHODE 5 : Serveur local avec PHP
+-----------------------------------
+Si vous avez PHP installé :
+
+    php -S localhost:8000
+
+Puis ouvrez : http://localhost:8000
+
+MÉTHODE 6 : Avec VS Code (si vous l'utilisez)
+----------------------------------------------
+1. Installez l'extension "Live Server"
+2. Clic droit sur index.html
+3. Sélectionnez "Open with Live Server"
+
+📌 NOTE IMPORTANTE
+------------------
+- Avant d'ouvrir le site, assurez-vous d'avoir placé votre logo "logoweb.png"
+  dans ce dossier (voir LOGO-INSTRUCTIONS.txt)
+- Le site nécessite une connexion Internet pour charger les polices Google Fonts
+- Toutes les animations devraient fonctionner immédiatement à l'ouverture
+
+🎨 NAVIGATEURS RECOMMANDÉS
+---------------------------
+✅ Chrome (meilleur rendu des animations)
+✅ Firefox
+✅ Safari
+✅ Edge
+
+Profitez de votre nouveau site ! ✨
+

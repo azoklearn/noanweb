@@ -1,0 +1,191 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║           🚀 COMMENT OUVRIR VOTRE SITE NOAN WEB 🚀           ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+📍 EMPLACEMENT DE VOS FICHIERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/Users/marinezablot/noan-web/
+
+📋 FICHIERS PRÉSENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ index.html          → Page principale du site
+✅ style.css           → Tous les styles et animations CSS
+✅ script.js           → Toutes les animations JavaScript
+✅ logo-placeholder.png → Logo de l'agence (à remplacer)
+✅ README.md           → Documentation complète
+✅ AMELIORATIONS.md    → Liste des améliorations apportées
+✅ GUIDE-OUVERTURE.txt → Ce fichier
+
+
+🌐 MÉTHODE 1 : OUVERTURE DIRECTE (Simple mais limité)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Ouvrez le dossier : /Users/marinezablot/noan-web/
+2. Double-cliquez sur le fichier : index.html
+3. Le site s'ouvre dans votre navigateur par défaut
+
+⚠️  Certaines fonctionnalités avancées peuvent ne pas fonctionner
+    en mode "file://" (notamment les requêtes AJAX futures)
+
+
+🔥 MÉTHODE 2 : SERVEUR LOCAL (Recommandé)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Option A - Avec Python (déjà installé sur Mac)
+───────────────────────────────────────────────
+1. Ouvrez le Terminal (Applications → Utilitaires → Terminal)
+
+2. Tapez ces commandes :
+   cd /Users/marinezablot/noan-web
+   python3 -m http.server 8000
+
+3. Ouvrez votre navigateur et allez sur :
+   http://localhost:8000
+
+4. Pour arrêter : Ctrl + C dans le Terminal
+
+
+Option B - Avec PHP (déjà installé sur Mac)
+────────────────────────────────────────────
+1. Ouvrez le Terminal
+
+2. Tapez ces commandes :
+   cd /Users/marinezablot/noan-web
+   php -S localhost:8000
+
+3. Ouvrez votre navigateur et allez sur :
+   http://localhost:8000
+
+4. Pour arrêter : Ctrl + C dans le Terminal
+
+
+Option C - Avec Node.js (si installé)
+──────────────────────────────────────
+1. Ouvrez le Terminal
+
+2. Installez http-server (une seule fois) :
+   npm install -g http-server
+
+3. Lancez le serveur :
+   cd /Users/marinezablot/noan-web
+   http-server -p 8000
+
+4. Ouvrez votre navigateur et allez sur :
+   http://localhost:8000
+
+5. Pour arrêter : Ctrl + C dans le Terminal
+
+
+💻 MÉTHODE 3 : AVEC VISUAL STUDIO CODE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Téléchargez VS Code (si pas déjà installé) :
+   https://code.visualstudio.com/
+
+2. Ouvrez VS Code
+
+3. Menu → Fichier → Ouvrir le dossier
+   Sélectionnez : /Users/marinezablot/noan-web
+
+4. Installez l'extension "Live Server" :
+   - Cliquez sur l'icône Extensions (carré à gauche)
+   - Cherchez "Live Server"
+   - Cliquez sur "Installer"
+
+5. Clic droit sur index.html → "Open with Live Server"
+
+6. Le site s'ouvre automatiquement dans votre navigateur
+
+
+🎨 PERSONNALISATION RAPIDE
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. CHANGER LE LOGO :
+   Remplacez logo-placeholder.png par votre logo
+
+2. MODIFIER LES COULEURS :
+   Ouvrez style.css et changez :
+   - #142DEB (bleu)
+   - #FFABE7 (rose)
+   - #E30C00 (rouge)
+
+3. AJOUTER DU CONTENU :
+   Ouvrez index.html avec un éditeur de texte
+
+
+📞 VOS INFORMATIONS ACTUELLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Nom       : Noan Web
+Ville     : Nancy, France
+Téléphone : 07 66 87 39 15
+Année     : 2025
+
+
+🎯 FONCTIONNALITÉS INCLUSES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✨ Preloader animé avec 4 écrans rotatifs
+✨ Menu hamburger interactif
+✨ Animation "reveal" mot par mot sur le titre
+✨ Compteurs animés effet "slot machine"
+✨ Bouton showreel magnétique qui suit la souris
+✨ Cartes prestations avec effet de brillance
+✨ Boutons avec effet marquee (défilement de texte)
+✨ Effet glitch sur la sélection de texte
+✨ Design 100% responsive (mobile, tablette, desktop)
+✨ Smooth scroll entre les sections
+✨ Parallax sur les éléments
+
+
+🐛 EN CAS DE PROBLÈME
+━━━━━━━━━━━━━━━━━━━━
+1. Le preloader reste bloqué ?
+   → Actualisez la page (Cmd + R)
+   → Ouvrez la console (Cmd + Option + J) pour voir les erreurs
+
+2. Les animations ne marchent pas ?
+   → Vérifiez que JavaScript est activé
+   → Testez avec un serveur local au lieu d'ouvrir directement
+
+3. Le design est cassé ?
+   → Videz le cache (Cmd + Shift + R)
+   → Vérifiez que tous les fichiers sont dans le même dossier
+
+
+📚 DOCUMENTATION COMPLÈTE
+━━━━━━━━━━━━━━━━━━━━━━━━
+Consultez README.md pour :
+- Guide complet de personnalisation
+- Liste de toutes les animations
+- Instructions pour la production
+- Optimisations SEO
+- Et bien plus !
+
+
+🚀 MISE EN LIGNE
+━━━━━━━━━━━━━━━━
+Pour mettre votre site en ligne :
+1. Trouvez un hébergeur (OVH, Hostinger, etc.)
+2. Uploadez tous les fichiers via FTP
+3. Votre site sera accessible via votre nom de domaine
+
+
+💡 ASTUCE PRO
+━━━━━━━━━━━━━
+Utilisez TOUJOURS un serveur local pour développer !
+Cela évite 99% des problèmes et vous permet de tester
+toutes les fonctionnalités dans des conditions réelles.
+
+
+═══════════════════════════════════════════════════════
+
+           🎉 BRAVO ! VOTRE SITE EST PRÊT ! 🎉
+
+      Design inspiré de NANCOMCY - Adapté pour Noan Web
+           Site créé avec ❤️ à Nancy, France
+
+═══════════════════════════════════════════════════════
+
+Questions ? Besoin d'aide ?
+→ Consultez README.md pour plus de détails
+→ Appelez-nous : 07 66 87 39 15
+
+Bon développement ! 🚀

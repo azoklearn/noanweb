@@ -1,0 +1,309 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║         ✅ NOAN WEB - VERSION FINALE SIMPLIFIÉE ✅                    ║
+║              Knock Bold + Inter | Site Web + SEO                    ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+🎯 MODIFICATIONS APPLIQUÉES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. 🔤 TYPOGRAPHIE SIMPLIFIÉE
+────────────────────────────
+✅ TITRES (H1-H6)
+   → Police : Knockout Bold (Adobe Fonts)
+   → Fallback : Impact, sans-serif
+   → Style : UPPERCASE, gras, puissant
+   → Font-weight : 700
+
+✅ CORPS DE TEXTE
+   → Police : Inter (Google Fonts)
+   → Fallback : -apple-system, BlinkMacSystemFont
+   → Style : Clean, moderne, lisible
+   → Font-weight : 400 (normal)
+
+
+2. 🎪 BOUTON SHOWREEL SUPPRIMÉ
+───────────────────────────────
+✅ Bouton circulaire retiré du Hero
+✅ Texte rotatif supprimé
+✅ Code JavaScript du showreel nettoyé
+✅ Styles CSS du showreel supprimés
+✅ Hero section simplifiée
+
+
+3. 💼 SERVICES RÉDUITS À 2
+──────────────────────────
+❌ SUPPRIMÉS :
+   - Graphisme
+   - Marketing
+   - Motion Design
+   - Réseaux Sociaux
+
+✅ CONSERVÉS :
+   1. SITE WEB
+      → Sites web sur mesure
+      → E-commerce
+      → Landing pages responsive
+
+   2. SEO
+      → Référencement naturel
+      → Optimisation Google
+      → Stratégie SEO
+
+
+4. 📱 INSTAGRAM AJOUTÉ
+──────────────────────
+✅ Footer mis à jour
+✅ Lien actif : https://instagram.com/noan.web
+✅ Affichage : "Instagram @noan.web"
+✅ Facebook et LinkedIn supprimés
+
+
+5. 🎨 DESIGN CONSERVÉ
+─────────────────────
+✅ Palette noir & blanc maintenue
+✅ Toutes les animations conservées :
+   - Preloader rotatif
+   - Reveal mot par mot
+   - Compteurs slot machine
+   - Menu hamburger animé
+   - Boutons marquee
+   - Smooth scroll
+   - Parallax
+   - Effet glitch
+
+
+═════════════════════════════════════════════════════════════════════
+
+📝 TYPOGRAPHIE FINALE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+KNOCKOUT BOLD (Titres)
+──────────────────────
+→ Tous les H1, H2, H3, H4, H5, H6
+→ Titre Hero principal
+→ Titres de sections
+→ Menu overlay
+→ Style : UPPERCASE automatique
+→ Caractère : Fort, impactant, bold
+→ Source : Adobe Fonts (Typekit)
+
+
+INTER (Corps de texte)
+──────────────────────
+→ Paragraphes
+→ Descriptions
+→ Boutons
+→ Footer
+→ Style : Normal, lisible, professionnel
+→ Caractère : Clean, moderne, versatile
+→ Source : Google Fonts
+
+
+CONTRASTE TYPOGRAPHIQUE
+────────────────────────
+Knockout Bold = PUISSANCE + IMPACT
+Inter         = CLARTÉ + LISIBILITÉ
+
+→ Parfait pour une agence web moderne !
+
+
+═════════════════════════════════════════════════════════════════════
+
+🎯 SERVICES FINAUX
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌─────────────────────────────────────────────────────────────┐
+│  SERVICE #1 : SITE WEB                                      │
+├─────────────────────────────────────────────────────────────┤
+│  → Sites web sur mesure                                     │
+│  → E-commerce                                               │
+│  → Landing pages responsive                                 │
+│                                                             │
+│  Tag blanc : "Site Web"                                     │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  SERVICE #2 : SEO                                           │
+├─────────────────────────────────────────────────────────────┤
+│  → Référencement naturel                                    │
+│  → Optimisation Google                                      │
+│  → Stratégie SEO                                            │
+│                                                             │
+│  Tag blanc : "SEO"                                          │
+└─────────────────────────────────────────────────────────────┘
+
+
+GRILLE RESPONSIVE
+─────────────────
+Desktop : 2 colonnes côte à côte
+Mobile  : 1 colonne (stack)
+Gap     : 3rem (desktop), 2rem (mobile)
+
+
+═════════════════════════════════════════════════════════════════════
+
+📱 RÉSEAUX SOCIAUX
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INSTAGRAM : @noan.web
+─────────────────────
+✅ Lien actif dans le footer
+✅ URL : https://instagram.com/noan.web
+✅ Affichage : "Instagram @noan.web"
+✅ Clic → ouvre Instagram dans un nouvel onglet
+
+
+SUPPRIMÉS
+─────────
+❌ Facebook
+❌ LinkedIn
+❌ YouTube
+
+
+═════════════════════════════════════════════════════════════════════
+
+🎨 PALETTE COULEURS (Noir & Blanc)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚫ #000000 - Noir pur (fond principal)
+⚫ #0a0a0a - Noir profond (footer)
+⚫ #1a1a1a - Gris très foncé (sections)
+⚫ #2a2a2a - Gris foncé (CTA)
+⚫ #333333 - Gris foncé (preloader)
+⚫ #666666 - Gris moyen (preloader)
+⚫ #cccccc - Gris clair (hover)
+⚪ #ffffff - Blanc pur (texte, accents, boutons)
+
+
+═════════════════════════════════════════════════════════════════════
+
+📂 FICHIERS MODIFIÉS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ index.html
+   → Fonts changées (Inter + Knockout)
+   → Showreel supprimé
+   → Services réduits à 2
+   → Instagram ajouté (@noan.web)
+   → Menu overlay simplifié
+
+✅ style.css
+   → Typographie Knockout Bold pour titres
+   → Typographie Inter pour texte
+   → Styles showreel supprimés
+   → Grille prestations adaptée (2 colonnes)
+   → Responsive optimisé
+
+✅ script.js
+   → Code showreel supprimé
+   → Animations conservées
+   → Code nettoyé et optimisé
+
+
+═════════════════════════════════════════════════════════════════════
+
+✨ ANIMATIONS CONSERVÉES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Preloader avec 4 écrans rotatifs
+✅ Hero reveal mot par mot
+✅ Compteurs effet slot machine
+✅ Menu hamburger animé
+✅ Boutons marquee (texte défilant)
+✅ Cartes avec shine effect
+✅ Smooth scroll entre sections
+✅ Parallax sur éléments
+✅ Effet glitch sur sélection (noir/blanc)
+✅ Header sticky qui rétrécit
+
+
+═════════════════════════════════════════════════════════════════════
+
+🚀 RÉSUMÉ FINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NOAN WEB - VERSION FINALE
+──────────────────────────
+✨ Design noir & blanc épuré
+✨ Typographie double : Knockout Bold + Inter
+✨ 2 services focalisés : Site Web + SEO
+✨ Instagram : @noan.web
+✨ Pas de showreel
+✨ Toutes les animations conservées
+✨ Code propre et optimisé
+✨ 100% responsive
+
+
+AVANT → APRÈS
+─────────────
+6 services    → 2 services (Site Web + SEO)
+Rubik 80's    → Knockout Bold + Inter
+Showreel      → Supprimé
+Social media  → Instagram uniquement (@noan.web)
+Multi-police  → Duo simplifié
+
+
+AVANTAGES
+─────────
+✅ Focus clair sur votre expertise
+✅ Typographie professionnelle et impactante
+✅ Chargement plus rapide (moins de contenu)
+✅ Message simple et direct
+✅ Design épuré et moderne
+
+
+═════════════════════════════════════════════════════════════════════
+
+📞 INFORMATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Agence       : NOAN WEB
+Localisation : Nancy, France
+Téléphone    : 07 66 87 39 15
+Instagram    : @noan.web
+Année        : 2025
+
+Services     : Site Web + SEO
+Style        : Noir & Blanc minimaliste
+Typo         : Knockout Bold + Inter
+
+
+═════════════════════════════════════════════════════════════════════
+
+🎯 POUR OUVRIR LE SITE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd /Users/marinezablot/noan-web
+python3 -m http.server 8000
+
+Puis ouvrez : http://localhost:8000
+
+
+💡 NOTE SUR KNOCKOUT BOLD
+─────────────────────────
+Knockout Bold est une police Adobe Fonts très puissante, 
+parfaite pour les titres d'impact. Si elle ne charge pas, 
+le site utilisera automatiquement Impact comme fallback.
+
+Associée à Inter (Google Fonts) pour le corps de texte, 
+vous obtenez un contraste typographique fort et moderne.
+
+
+═══════════════════════════════════════════════════════════════════
+
+       🎉 SITE NOAN WEB - VERSION FINALE TERMINÉE ! 🎉
+
+        Focus Site Web + SEO | Knockout Bold + Inter
+             Design noir & blanc épuré et moderne
+
+═══════════════════════════════════════════════════════════════════
+
+Questions ? Consultez README.md ou GUIDE-OUVERTURE.txt
+
+Instagram : @noan.web
+Téléphone : 07 66 87 39 15
+Nancy, France 🇫🇷
+
+═══════════════════════════════════════════════════════════════════
