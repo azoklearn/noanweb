@@ -1,7 +1,8 @@
 // ========================================
-// PRELOADER ANIMATION
+// PRELOADER ANIMATION - SYNCHRONISÉE
 // ========================================
 const PRELOADER_TRANSITION_DURATION = 500;
+const SCREEN_DELAY = 250; // Délai entre chaque écran
 
 // Activer le preloader au chargement
 document.body.classList.add('preloader-active');
@@ -11,17 +12,36 @@ window.addEventListener("load", function() {
     
     setTimeout(() => {
         const preloader = document.getElementById("preloader");
+        const logoPreloader = document.querySelector('.logo-preloader');
         
-        if (preloader) {
+        if (preloader && logoPreloader) {
+            // Fade in du logo
+            logoPreloader.style.opacity = '0';
+            setTimeout(() => {
+                logoPreloader.style.transition = 'opacity 0.5s ease-in';
+                logoPreloader.style.opacity = '1';
+            }, 100);
+            
+            // Animation des écrans de couleur en synchronisation
             const screens = preloader.querySelectorAll('.screen');
             screens.forEach((screen, index) => {
                 setTimeout(() => {
-                    screen.classList.add("hide");
-                }, index * (PRELOADER_TRANSITION_DURATION / 4));
+                    screen.style.transition = 'opacity 0.5s ease-out';
+                    screen.style.opacity = '0';
+                    setTimeout(() => {
+                        screen.classList.add("hide");
+                    }, 500);
+                }, index * SCREEN_DELAY);
             });
-
-            // Calculer le temps total de l'animation
-            const totalAnimationTime = screens.length * (PRELOADER_TRANSITION_DURATION / 2) + PRELOADER_TRANSITION_DURATION;
+            
+            // Calculer le temps total (3 écrans × 250ms = 750ms + 500ms transition)
+            const totalAnimationTime = (screens.length - 1) * SCREEN_DELAY + 1000;
+            
+            // Fade out du logo avant de cacher le preloader
+            setTimeout(() => {
+                logoPreloader.style.transition = 'opacity 0.5s ease-out';
+                logoPreloader.style.opacity = '0';
+            }, totalAnimationTime - 500);
             
             setTimeout(() => {
                 preloader.classList.add("hide");
@@ -30,6 +50,11 @@ window.addEventListener("load", function() {
                 setTimeout(() => {
                     document.body.classList.remove('preloader-active');
                     document.body.classList.add('preloader-done');
+                    
+                    // Afficher le header après le gros logo
+                    setTimeout(() => {
+                        document.body.classList.add('hero-visible');
+                    }, 1500);
                 }, 500);
             }, totalAnimationTime);
         }
@@ -90,13 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Header scroll behavior
+    // Header scroll behavior - apparaît uniquement au scroll
     if (header) {
         const handleScroll = () => {
-            if (window.scrollY > 0) {
+            if (window.scrollY > 50) {
+                header.classList.add('visible');
                 header.classList.remove('bigger');
             } else {
-                header.classList.add('bigger');
+                header.classList.remove('visible');
             }
         };
         
