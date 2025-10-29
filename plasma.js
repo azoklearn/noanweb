@@ -233,8 +233,8 @@ class Plasma {
       const directionMultiplier = this.options.direction === 'reverse' ? -1.0 : 1.0;
 
       // Vérifier si WebGL 2 est supporté
-      const canvas = document.createElement('canvas');
-      const gl2 = canvas.getContext('webgl2');
+      const testCanvas = document.createElement('canvas');
+      const gl2 = testCanvas.getContext('webgl2');
       const useWebGL2 = !!gl2;
       
       console.log('WebGL 2 supported:', useWebGL2);
@@ -370,51 +370,68 @@ class Plasma {
 }
 
 // Initialize Plasma on hero section
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM loaded, initializing Plasma...');
+function initPlasma() {
+  console.log('Initializing Plasma...');
   
   const heroSection = document.querySelector('.section-hero-accueil');
   console.log('Hero section found:', heroSection);
   
-  if (heroSection) {
-    // Create container for plasma
-    const plasmaContainer = document.createElement('div');
-    plasmaContainer.className = 'plasma-container';
-    plasmaContainer.style.position = 'absolute';
-    plasmaContainer.style.top = '0';
-    plasmaContainer.style.left = '0';
-    plasmaContainer.style.width = '100%';
-    plasmaContainer.style.height = '100%';
-    plasmaContainer.style.zIndex = '0';
-    // Fallback background - visible immédiatement
-    plasmaContainer.style.background = 'linear-gradient(135deg, rgba(255,107,53,0.2) 0%, rgba(0,0,0,0.9) 100%)';
-    plasmaContainer.style.opacity = '1';
-    
-    heroSection.style.position = 'relative';
-    heroSection.style.background = 'transparent';
-    heroSection.appendChild(plasmaContainer);
-    console.log('Plasma container added to hero section');
-
-    // Make sure hero-content is above
-    const heroContent = heroSection.querySelector('.hero-content');
-    if (heroContent) {
-      heroContent.style.position = 'relative';
-      heroContent.style.zIndex = '1';
-    }
-
-    console.log('Creating Plasma instance...');
-    window.plasma = new Plasma({
-      container: plasmaContainer,
-      color: '#ff6b35',
-      speed: 0.6,
-      direction: 'forward',
-      scale: 1.1,
-      opacity: 0.8,
-      mouseInteractive: true
-    });
-    console.log('Plasma instance created:', window.plasma);
-  } else {
+  if (!heroSection) {
     console.error('Hero section not found!');
+    return;
+  }
+
+  // Create container for plasma
+  const plasmaContainer = document.createElement('div');
+  plasmaContainer.className = 'plasma-container';
+  plasmaContainer.style.position = 'absolute';
+  plasmaContainer.style.top = '0';
+  plasmaContainer.style.left = '0';
+  plasmaContainer.style.width = '100%';
+  plasmaContainer.style.height = '100%';
+  plasmaContainer.style.zIndex = '0';
+  // Fallback background - visible immédiatement
+  plasmaContainer.style.background = 'linear-gradient(135deg, rgba(255,107,53,0.4) 0%, rgba(0,0,0,0.95) 100%)';
+  plasmaContainer.style.opacity = '1';
+  
+  heroSection.style.position = 'relative';
+  heroSection.style.background = 'transparent';
+  heroSection.style.setProperty('background', 'transparent', 'important');
+  heroSection.insertBefore(plasmaContainer, heroSection.firstChild);
+  console.log('Plasma container added to hero section');
+
+  // Make sure hero-content is above
+  const heroContent = heroSection.querySelector('.hero-content');
+  if (heroContent) {
+    heroContent.style.position = 'relative';
+    heroContent.style.zIndex = '1';
+  }
+
+  console.log('Creating Plasma instance...');
+  window.plasma = new Plasma({
+    container: plasmaContainer,
+    color: '#ff6b35',
+    speed: 0.6,
+    direction: 'forward',
+    scale: 1.1,
+    opacity: 0.8,
+    mouseInteractive: true
+  });
+  console.log('Plasma instance created:', window.plasma);
+}
+
+// Try multiple times to ensure DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPlasma);
+} else {
+  initPlasma();
+}
+
+// Also try on window load as backup
+window.addEventListener('load', () => {
+  if (!window.plasma) {
+    console.log('Retrying Plasma initialization on window load...');
+    initPlasma();
   }
 });
 
