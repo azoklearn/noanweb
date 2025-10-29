@@ -406,9 +406,14 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    background: transparent;
     overflow: hidden;
     padding-top: 80px;
+}
+
+.section-hero-accueil .hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content {
@@ -1119,6 +1124,30 @@ body.hero-visible .section-header {
     background: transparent;
     color: #ffffff;
     text-shadow: 1px 1px 0 rgb(255 255 255), -1px -1px  0 #000;
+}
+
+/* ========================================
+   SCROLL FLOAT ANIMATION
+   ======================================== */
+.scroll-float {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.scroll-float-text {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    line-height: inherit;
+    width: 100%;
+}
+
+.scroll-float .char {
+    display: inline-block;
+    will-change: transform, opacity;
+    white-space: pre;
 }
 
 /* ========================================

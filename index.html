@@ -47,8 +47,12 @@
     
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="bubble-menu.css">
+    <link rel="stylesheet" href="folder.css">
+    <link rel="stylesheet" href="plasma.css">
 </head>
 <body class="body">
     
@@ -85,15 +89,6 @@
     <!-- Header -->
     <div class="section-header bigger">
         <div class="header-container">
-            <div class="nav-trigger">
-                <div class="btn1">
-                    <div class="icon-left"></div>
-                    <div class="icon-right"></div>
-                </div>
-            </div>
-            <a href="#" class="logo-link">
-                <div class="logo-text">NOANWEB</div>
-            </a>
             <div class="header-contact">
                 <a href="tel:0766873915" class="icon-link" title="Téléphone : 07 66 87 39 15">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
@@ -131,7 +126,7 @@
                 </div>
                 <div class="column-content homepage-curve-top-right">
                     <div class="text-content">
-                        <h2 class="title-medium txt-white italic">Agence Web Nancy - Création Site Internet</h2>
+                        <h2 class="title-medium txt-white italic scroll-float">À propos</h2>
                         <p class="text-intro txt-white">NOAN WEB, votre <strong>agence web à Nancy</strong> spécialisée dans la <strong>création de sites internet</strong> et le <strong>référencement SEO</strong>. Nous accompagnons les entreprises de Nancy, Grand Est et toute la France dans leur transformation digitale.</p>
                         <p class="text-intro txt-white"><strong>Nos engagements</strong><br><em>Proximité à Nancy • Devis gratuit • Site web responsive • SEO optimisé</em></p>
                         <div class="margin-top">
@@ -191,29 +186,13 @@
         </div>
     </section>
 
-    <!-- Section Prestations -->
-    <section id="services" class="section-prestations">
+    <!-- Section Portfolio -->
+    <section id="services" class="section-prestations portfolio-section">
         <div class="container-large">
             <div class="text-content-center">
-                <h2 class="title-medium txt-white title-section-center italic">CRÉATION SITE WEB & SEO NANCY</h2>
-                <div class="prestations-grid">
-                    <div class="bloc-prestation">
-                        <div class="title-extra-small txt-white italic">Création site internet Nancy - Site vitrine, E-commerce, site sur mesure responsive et optimisé SEO</div>
-                        <div class="tag-small txt-white">Site Web Nancy</div>
-                    </div>
-                    <div class="bloc-prestation">
-                        <div class="title-extra-small txt-white italic">Référencement SEO Nancy - Positionnement Google, stratégie SEO locale, visibilité Grand Est</div>
-                        <div class="tag-small txt-white">SEO Nancy</div>
-                    </div>
-                </div>
-                <div class="margin-top">
-                    <a href="#contact" class="marquee-btn marquee-btn-white">
-                        <span class="label">Démarrer</span>
-                        <span class="marquee" aria-hidden="true">
-                            <span class="track">Démarrer &nbsp; Démarrer &nbsp;</span>
-                            <span class="track clone">Démarrer &nbsp; Démarrer &nbsp;</span>
-                        </span>
-                    </a>
+                <h2 class="title-medium txt-white title-section-center italic">PORTFOLIO</h2>
+                <div class="portfolio-grid">
+                    <!-- Les dossiers seront générés par JavaScript -->
                 </div>
             </div>
         </div>
@@ -253,6 +232,9 @@
         </section>
     </footer>
 
+    <script src="bubble-menu.js"></script>
+    <script src="plasma.js"></script>
+    <script src="folder.js"></script>
     <script src="script.js"></script>
     
     <!-- Schema.org Local Business -->

@@ -1,4 +1,121 @@
 // ========================================
+// REGISTER GSAP PLUGINS
+// ========================================
+function registerScrollTrigger() {
+    if (typeof gsap !== 'undefined') {
+        // Check if ScrollTrigger is available (either as global or via gsap)
+        const ST = typeof ScrollTrigger !== 'undefined' ? ScrollTrigger : (typeof gsap.ScrollTrigger !== 'undefined' ? gsap.ScrollTrigger : null);
+        if (ST) {
+            gsap.registerPlugin(ST);
+            return true;
+        }
+    }
+    return false;
+}
+
+// Try to register immediately if available
+registerScrollTrigger();
+
+// ========================================
+// SCROLL FLOAT ANIMATION
+// ========================================
+function initScrollFloat() {
+    const scrollFloatElements = document.querySelectorAll('.scroll-float');
+    
+    if (scrollFloatElements.length === 0 || typeof gsap === 'undefined') {
+        return;
+    }
+    
+    // Check if ScrollTrigger is available
+    const hasScrollTrigger = (typeof ScrollTrigger !== 'undefined' || typeof gsap.ScrollTrigger !== 'undefined');
+    if (!hasScrollTrigger) {
+        console.warn('ScrollTrigger not loaded. ScrollFloat animation will not work.');
+        return;
+    }
+    
+    scrollFloatElements.forEach(el => {
+        // Skip if already initialized
+        if (el.dataset.scrollFloatInit === '1') return;
+        el.dataset.scrollFloatInit = '1';
+        
+        // Get the original text
+        const originalText = el.textContent.trim();
+        
+        // Create wrapper for text
+        const textWrapper = document.createElement('span');
+        textWrapper.className = 'scroll-float-text';
+        textWrapper.style.display = 'inline-block';
+        
+        // Split text into characters
+        const chars = originalText.split('').map((char, index) => {
+            const charSpan = document.createElement('span');
+            charSpan.className = 'char';
+            charSpan.textContent = char === ' ' ? '\u00A0' : char;
+            textWrapper.appendChild(charSpan);
+            return charSpan;
+        });
+        
+        // Clear and add wrapper
+        el.textContent = '';
+        el.appendChild(textWrapper);
+        
+        // Set initial state
+        gsap.set(chars, {
+            willChange: 'opacity, transform',
+            opacity: 0,
+            yPercent: 120,
+            scaleY: 2.3,
+            scaleX: 0.7,
+            transformOrigin: '50% 0%'
+        });
+        
+        // Animate on scroll - démarre encore plus tôt
+        gsap.to(chars, {
+            duration: 1.8,
+            ease: 'back.inOut(2)',
+            opacity: 1,
+            yPercent: 0,
+            scaleY: 1,
+            scaleX: 1,
+            stagger: 0.12,
+            scrollTrigger: {
+                trigger: el,
+                start: 'top bottom-=20%',
+                end: 'bottom top-=20%',
+                scrub: true
+            }
+        });
+    });
+}
+
+// Initialize after DOM and GSAP are ready
+function tryInitScrollFloat() {
+    if (typeof gsap !== 'undefined') {
+        registerScrollTrigger();
+        initScrollFloat();
+        return true;
+    }
+    return false;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Wait for GSAP to be fully loaded
+    if (!tryInitScrollFloat()) {
+        // Retry after a short delay if GSAP isn't loaded yet
+        setTimeout(() => {
+            tryInitScrollFloat();
+        }, 100);
+    }
+});
+
+// Also try after window load
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        tryInitScrollFloat();
+    }, 200);
+});
+
+// ========================================
 // PRELOADER ANIMATION - SYNCHRONISÉE
 // ========================================
 const PRELOADER_TRANSITION_DURATION = 500;
@@ -74,46 +191,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ========================================
-// HEADER - MENU TOGGLE & SCROLL BEHAVIOR
+// HEADER - SCROLL BEHAVIOR
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('.nav-trigger');
-    const menuNav = document.getElementById('main-nav');
     const header = document.querySelector('.section-header');
-    
-    if (menuButton && menuNav) {
-        menuNav.style.display = 'none';
-        menuNav.style.opacity = '0';
-        
-        menuButton.addEventListener('click', () => {
-            menuButton.classList.toggle('nav-trigger-open');
-            const isMenuOpen = menuButton.classList.contains('nav-trigger-open');
-
-            if (isMenuOpen) {
-                menuNav.style.display = 'flex';
-                requestAnimationFrame(() => {
-                    menuNav.style.opacity = '1';
-                });
-            } else {
-                menuNav.style.opacity = '0';
-                setTimeout(() => {
-                    menuNav.style.display = 'none';
-                }, 300);
-            }
-        });
-        
-        // Fermer le menu lors du clic sur un lien
-        const menuLinks = menuNav.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuButton.classList.remove('nav-trigger-open');
-                menuNav.style.opacity = '0';
-                setTimeout(() => {
-                    menuNav.style.display = 'none';
-                }, 300);
-            });
-        });
-    }
     
     // Header scroll behavior - apparaît uniquement au scroll
     if (header) {
