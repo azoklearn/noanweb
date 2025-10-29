@@ -406,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: transparent;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
     overflow: hidden;
     padding-top: 80px;
 }

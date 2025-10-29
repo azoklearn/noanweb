@@ -202,9 +202,11 @@
   width: 100%;
   min-height: var(--pill-min-h);
   padding: clamp(1.5rem, 3vw, 8rem) 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(1.5rem, 4vw, 4rem);
   font-weight: 400;
   line-height: 0;
+  font-style: italic;
   border-radius: 999px;
   background: var(--pill-bg);
   color: var(--pill-color);

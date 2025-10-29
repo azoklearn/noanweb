@@ -178,7 +178,16 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Site Vitrine',
       color: '#ffffff',
-      items: ['Design', 'Responsive', 'SEO']
+      items: ['Design', 'Responsive', 'SEO'],
+      href: 'https://lestatouables.netlify.app',
+      description: 'Site web pour salon de tatouage'
+    },
+    {
+      title: 'Site Pâtisserie',
+      color: '#ffffff',
+      items: ['Design', 'Responsive', 'SEO'],
+      href: 'https://lisapatisserie.vercel.app',
+      description: 'Site web pour pâtissière'
     }
   ];
 
@@ -200,15 +209,15 @@ document.addEventListener('DOMContentLoaded', () => {
       items: item.items,
       container: folderContainer,
       className: 'custom-folder',
-      clickable: index === 0,
-      href: index === 0 ? 'https://lestatouables.netlify.app' : null
+      clickable: !!item.href,
+      href: item.href || null
     });
 
-    // Ajouter le texte sous le dossier pour le premier item
-    if (index === 0) {
+    // Ajouter le texte sous le dossier si description existe
+    if (item.description) {
       const description = document.createElement('div');
       description.className = 'portfolio-item-description';
-      description.textContent = 'Site web pour salon de tatouage';
+      description.textContent = item.description;
       portfolioItem.appendChild(description);
     }
 

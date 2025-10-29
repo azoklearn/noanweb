@@ -71,18 +71,17 @@ function initScrollFloat() {
         
         // Animate on scroll - démarre encore plus tôt
         gsap.to(chars, {
-            duration: 1.8,
-            ease: 'back.inOut(2)',
+            duration: 1.2,
+            ease: 'back.out(1.7)',
             opacity: 1,
             yPercent: 0,
             scaleY: 1,
             scaleX: 1,
-            stagger: 0.12,
+            stagger: 0.05,
             scrollTrigger: {
                 trigger: el,
-                start: 'top bottom-=20%',
-                end: 'bottom top-=20%',
-                scrub: true
+                start: 'top bottom-=30%',
+                toggleActions: 'play reverse play reverse'
             }
         });
     });
@@ -476,6 +475,96 @@ document.querySelectorAll('.bloc-prestation, .chiffre-cle, .resume').forEach(el 
     el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
     fadeInObserver.observe(el);
 });
+
+// ========================================
+// ANIMATION TRANSITION PAGE 1 -> PAGE 2 (Glissement)
+// ========================================
+function initSectionTransition() {
+    const heroSection = document.querySelector('.section-hero-accueil');
+    const secondSection = document.querySelector('.section-white');
+    
+    if (!heroSection || !secondSection || typeof gsap === 'undefined') {
+        return;
+    }
+    
+    const hasScrollTrigger = (typeof ScrollTrigger !== 'undefined' || typeof gsap.ScrollTrigger !== 'undefined');
+    if (!hasScrollTrigger) {
+        return;
+    }
+    
+    // Positionner la section pour qu'elle puisse glisser par-dessus la hero
+    secondSection.style.position = 'relative';
+    secondSection.style.zIndex = '10';
+    secondSection.style.width = '100%';
+    secondSection.style.overflow = 'hidden';
+    
+    // État initial - la deuxième section commence à droite, hors écran
+    gsap.set(secondSection, {
+        x: '100%'
+    });
+    
+    // Animation de glissement - la deuxième section glisse par-dessus la première
+    gsap.to(secondSection, {
+        x: '0%',
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: heroSection,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1
+        }
+    });
+}
+
+// ========================================
+// ANIMATION TITRE "POURQUOI AVOIR UN SITE WEB" (Glissement gauche -> droite)
+// ========================================
+function initPourquoiTitleAnimation() {
+    const pourquoiSection = document.querySelector('#pourquoi');
+    const pourquoiTitle = pourquoiSection ? pourquoiSection.querySelector('.title-section-center') : null;
+    
+    if (!pourquoiTitle || typeof gsap === 'undefined') {
+        return;
+    }
+    
+    const hasScrollTrigger = (typeof ScrollTrigger !== 'undefined' || typeof gsap.ScrollTrigger !== 'undefined');
+    if (!hasScrollTrigger) {
+        return;
+    }
+    
+    // État initial - le titre commence à gauche, hors écran
+    gsap.set(pourquoiTitle, {
+        x: '-100%'
+    });
+    
+    // Animation de glissement - le titre glisse de gauche vers la droite
+    gsap.to(pourquoiTitle, {
+        x: '0%',
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: pourquoiSection,
+            start: 'top bottom-=30%',
+            end: 'top center',
+            scrub: false,
+            toggleActions: 'play none none none'
+        }
+    });
+}
+
+// Initialiser après le chargement
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            initSectionTransition();
+            initPourquoiTitleAnimation();
+        }, 100);
+    });
+} else {
+    setTimeout(() => {
+        initSectionTransition();
+        initPourquoiTitleAnimation();
+    }, 100);
+}
 
 // ========================================
 // PERFORMANCE - Désactiver les animations sur mobile si nécessaire

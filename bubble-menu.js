@@ -130,10 +130,13 @@ class BubbleMenu {
       link.style.setProperty('--pill-color', this.options.menuContentColor);
       link.style.setProperty('--hover-bg', item.hoverStyles?.bgColor || '#f3f4f6');
       link.style.setProperty('--hover-color', item.hoverStyles?.textColor || this.options.menuContentColor);
+      
+      // Mettre la première lettre en majuscule
+      const capitalizeFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
       const label = document.createElement('span');
       label.className = 'pill-label';
-      label.textContent = item.label;
+      label.textContent = capitalizeFirst(item.label);
       
       link.appendChild(label);
       listItem.appendChild(link);
