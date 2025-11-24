@@ -50,7 +50,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
-    <link rel="stylesheet" href="style.css?v=26">
+    <link rel="stylesheet" href="style.css?v=34">
     <link rel="stylesheet" href="bubble-menu.css">
     <link rel="stylesheet" href="folder.css">
     <link rel="stylesheet" href="color-bends.css">
@@ -90,12 +90,10 @@
         
         <!-- Navigation Bar -->
         <nav class="hero-navbar" id="hero-navbar">
-            <a href="#services" class="nav-link">Nos Services</a>
             <a href="#about" class="nav-link">À Propos</a>
-            <a href="#projets" class="nav-link">Réalisations</a>
-            <a href="mailto:barbelinnoan@gmail.com" class="nav-link">
-                Contact
-            </a>
+            <a href="#projets" class="nav-link">Mes Projets</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
         
         <div class="container-large">
@@ -119,7 +117,7 @@
 
 
     <!-- Section Communication -->
-    <section class="section-white">
+    <section id="about" class="section-white">
         <div class="container-full-width">
             <div class="two-columns">
                 <div class="column-image bg-blue">
@@ -148,7 +146,7 @@
     </section>
 
     <!-- Section Mes Projets -->
-    <section class="section-projets">
+    <section id="projets" class="section-projets">
         <div class="container-large">
             <div class="text-content-center">
                 <h2 class="title-medium title-section-center scroll-fade">Mes <span class="highlight-noan">Projets</span></h2>
@@ -183,7 +181,7 @@
     </section>
 
     <!-- Section Comparaison -->
-    <section class="section-comparaison">
+    <section id="services" class="section-comparaison">
         <div class="container-large">
             <div class="text-content-center">
                 <h2 class="title-medium title-section-center scroll-fade">Pourquoi <span class="highlight-noan">Nous</span> ?</h2>
@@ -349,33 +347,12 @@
     </section>
 
     <!-- Section SEO Textuelle -->
-    <section class="section-seo-text">
-            <div class="container-large">
-            <div class="seo-content">
-                <h2 class="seo-title scroll-fade">Webdesigner à Nancy : Création de sites web en Lorraine et Meurthe-et-Moselle</h2>
-                <div class="seo-text-columns scroll-fade">
-                    <div class="seo-column">
-                        <h3>Votre webdesigner freelance à Nancy (54)</h3>
-                        <p>Basé à <strong>Nancy</strong> en <strong>Meurthe-et-Moselle</strong>, je suis <strong>webdesigner</strong> et <strong>développeur web freelance</strong> spécialisé dans la <strong>création de sites internet sur mesure</strong>. Mon approche combine design moderne, performance technique et <strong>référencement SEO</strong> pour vous garantir un site web professionnel et efficace.</p>
-                        <p>J'interviens sur <strong>Nancy</strong> et dans toute la région <strong>Lorraine</strong> : Vandœuvre-lès-Nancy, Villers-lès-Nancy, Laxou, Tomblaine, Maxéville, Metz, Épinal, Lunéville, Toul et l'ensemble du département <strong>54</strong>.</p>
-                    </div>
-                    <div class="seo-column">
-                        <h3>Services de création web à Nancy</h3>
-                        <p>En tant que <strong>créateur de sites web</strong>, je vous accompagne sur tous vos projets digitaux : <strong>sites vitrines</strong>, <strong>sites e-commerce</strong>, <strong>sites institutionnels</strong>, portfolios et applications web personnalisées. Chaque projet est pensé pour refléter votre identité et atteindre vos objectifs business.</p>
-                        <p>Mon expertise en <strong>webdesign Nancy</strong> et en <strong>développement web</strong> me permet de créer des sites responsives, rapides et optimisés pour le <strong>référencement naturel</strong>. Faites confiance à un <strong>webdesigner local</strong> qui connaît le marché nancéien et lorrain.</p>
-                    </div>
-                </div>
-                <div class="seo-keywords">
-                    <p class="seo-small">Mots-clés : webdesigner nancy, création site web nancy, site internet nancy, agence web lorraine, développeur web meurthe-et-moselle, webdesign nancy 54, création site internet lorraine, designer web nancy, site vitrine nancy, référencement seo nancy</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="footer-content">
-            <div class="footer-links">
+                    <div class="footer-links">
                 <a href="/mentions-legales.html" class="footer-link">Mentions légales</a>
                 <span class="footer-separator">|</span>
                 <a href="/cgv.html" class="footer-link">CGV</a>
@@ -616,8 +593,12 @@
     <!-- Scripts -->
     <script>
     // === Configuration API Google ===
-    const placeId = "ChIJ9RM6IiKjlEcRroz2cLcp15k"; // Place ID noan.web
+    const placeId = "ChIJ9RNUKiKjlEcRroxtcLcn2dk"; // Place ID VALIDE noan.web
     const apiKey = "AIzaSyDu7OtByU-uH0OBsfEe-7pko_VO0MQequE";
+    
+    // Debug
+    console.log("🔍 Chargement des avis avec le nouveau Place ID...");
+    console.log("Place ID:", placeId);
 
     // === Fonction pour charger les avis Google ===
     async function loadGoogleReviews() {
@@ -626,10 +607,15 @@
 
         const proxyUrl = "https://corsproxy.io/?";
         const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,reviews,user_ratings_total&key=${apiKey}`;
+        
+        console.log("📡 URL complète:", proxyUrl + encodeURIComponent(url));
 
         try {
             const response = await fetch(proxyUrl + encodeURIComponent(url));
+            console.log("✅ Réponse reçue, status:", response.status);
+            
             const data = await response.json();
+            console.log("📦 Données reçues:", data);
 
             if (data.result && data.result.reviews) {
                 const r = data.result;
@@ -665,17 +651,23 @@
                     </div>
                 `;
             } else {
+                console.warn("⚠️ Pas de reviews dans la réponse:", data);
                 container.innerHTML = `
                     <div class="avis-error">
-                        <p>Aucun avis disponible pour le moment.</p>
+                        <p>Réponse API reçue mais aucun avis trouvé.</p>
+                        <p style="font-size:0.9rem;margin-top:1rem;">Status: ${data.status || 'Inconnu'}</p>
+                        <p style="font-size:0.9rem;">Message: ${data.error_message || 'Pas de message d\'erreur'}</p>
+                        <a href="https://www.google.com/maps/place/noan.web" target="_blank" style="color:#4285f4;text-decoration:underline;display:block;margin-top:1rem;">→ Voir les avis sur Google Maps</a>
                     </div>
                 `;
             }
         } catch (error) {
-            console.error("Erreur lors du chargement des avis:", error);
+            console.error("❌ Erreur lors du chargement des avis:", error);
             container.innerHTML = `
                 <div class="avis-error">
-                    <p>Impossible de charger les avis. <a href="https://www.google.com/maps/place/noan.web" target="_blank" style="color:#4285f4;text-decoration:underline;">Voir sur Google Maps</a></p>
+                    <p>Erreur de connexion à l'API Google.</p>
+                    <p style="font-size:0.9rem;margin-top:1rem;">Détails: ${error.message}</p>
+                    <a href="https://www.google.com/maps/place/noan.web" target="_blank" style="color:#4285f4;text-decoration:underline;display:block;margin-top:1rem;">→ Voir les avis sur Google Maps</a>
                 </div>
             `;
         }
