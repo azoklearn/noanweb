@@ -176,24 +176,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const portfolioItems = [
     {
-      title: 'Site Vitrine',
+      title: 'Site Les Tatouables',
       color: '#ffffff',
       items: ['Design', 'Responsive', 'SEO'],
       href: 'https://lestatouables.netlify.app',
-      description: 'Site web pour salon de tatouage'
     },
     {
       title: 'Site Pâtisserie',
       color: '#ffffff',
       items: ['Design', 'Responsive', 'SEO'],
       href: 'https://lisapatisserie.vercel.app',
-      description: 'Site web pour pâtissière'
+    },
+    {
+      title: '    Site BlablarunClub Nancy',
+      color: '#ffffff',
+      items: ['Design', 'Responsive', 'SEO'],
+      href: 'https://blablarunclubnancy.netlify.app',
     }
   ];
 
   portfolioItems.forEach((item, index) => {
     const portfolioItem = document.createElement('div');
     portfolioItem.className = 'portfolio-item';
+
+    // Ajouter le titre au-dessus du dossier
+    if (item.title) {
+      const title = document.createElement('div');
+      title.className = 'portfolio-item-title';
+      title.textContent = item.title.trim();
+      portfolioItem.appendChild(title);
+    }
 
     const folderContainer = document.createElement('div');
     folderContainer.style.height = '200px';
@@ -205,13 +217,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Rendre le dossier cliquable pour rediriger vers le site
     const folder = new Folder({
       color: item.color,
-      size: 2,
+      size: 3,
       items: item.items,
       container: folderContainer,
       className: 'custom-folder',
       clickable: !!item.href,
       href: item.href || null
     });
+
+    portfolioItem.appendChild(folderContainer);
 
     // Ajouter le texte sous le dossier si description existe
     if (item.description) {
@@ -222,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     portfolioGrid.appendChild(portfolioItem);
-    portfolioItem.appendChild(folderContainer);
   });
 });
 

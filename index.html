@@ -30,9 +30,7 @@
     <link rel="canonical" href="https://noanweb.fr/">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
     <!-- Robots -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -55,17 +53,8 @@
     <link rel="stylesheet" href="color-bends.css">
 </head>
 <body class="body">
-    
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preloader-content">
-            <div class="logo-preloader">NOANWEB</div>
-        </div>
-        <div class="screen screen1"></div>
-        <div class="screen screen2"></div>
-        <div class="screen screen3"></div>
-        <div class="screen screen4"></div>
-    </div>
+    <!-- Preloader - Fond bleu -->
+    <div id="preloader"></div>
 
     <!-- Menu Overlay -->
     <div id="main-nav" class="menu-overlay-nav">
@@ -86,24 +75,11 @@
         </div>
     </div>
 
-    <!-- Header -->
-    <div class="section-header bigger">
-        <div class="header-container">
-            <div class="header-contact">
-                <a href="tel:0766873915" class="icon-link" title="Téléphone : 07 66 87 39 15">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- Hero Section -->
     <section id="hero" class="section-hero-accueil">
         <div class="container-large">
             <div class="hero-content">
-                <h1 class="seo-text">CRÉATION SITE WEB NANCY | AGENCE WEB NANCY</h1>
+                <h1 class="seo-text">AGENCE WEB</h1>
                 <div class="hero-logo-big">NOANWEB</div>
                 <div class="scroll-down">
                     <a href="#section-stats">
@@ -129,12 +105,19 @@
                         <h2 class="title-medium txt-white italic scroll-float">À propos</h2>
                         <p class="text-intro txt-white">NOAN WEB, votre <strong>agence web à Nancy</strong> spécialisée dans la <strong>création de sites internet</strong> et le <strong>référencement SEO</strong>. Nous accompagnons les entreprises de Nancy, Grand Est et toute la France dans leur transformation digitale.</p>
                         <p class="text-intro txt-white"><strong>Nos engagements</strong><br><em>Proximité à Nancy • Devis gratuit • Site web responsive • SEO optimisé</em></p>
-                        <div class="margin-top">
+                        <div class="margin-top" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
                             <a href="#contact" class="marquee-btn marquee-btn-white">
                                 <span class="label">Nous contacter</span>
                                 <span class="marquee" aria-hidden="true">
                                     <span class="track">Nous contacter &nbsp; Nous contacter &nbsp;</span>
                                     <span class="track clone">Nous contacter &nbsp; Nous contacter &nbsp;</span>
+                                </span>
+                            </a>
+                            <a href="#services" class="marquee-btn marquee-btn-white">
+                                <span class="label">Nos créations</span>
+                                <span class="marquee" aria-hidden="true">
+                                    <span class="track">Nos créations &nbsp; Nos créations &nbsp;</span>
+                                    <span class="track clone">Nos créations &nbsp; Nos créations &nbsp;</span>
                                 </span>
                             </a>
                         </div>
@@ -193,6 +176,109 @@
                 <h2 class="title-medium txt-white title-section-center italic">PORTFOLIO</h2>
                 <div class="portfolio-grid">
                     <!-- Les dossiers seront générés par JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avis Google -->
+    <section id="avis" class="section-avis">
+        <div class="container-large">
+            <div class="text-content-center">
+                <h2 class="title-medium txt-white title-section-center italic">AVIS CLIENTS</h2>
+                <div class="avis-google-container">
+                    <div class="google-reviews-widget">
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Loric Protoy</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Très professionnel et aimable, il sait comprendre le projet personnel derrière ma demande en tant que indépendant en E-commerce Il a su trouver quels sont les besoins réels et proposer des solutions adaptées. Un vrai professionnel qui prend le temps de comprendre votre vision.</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Dominique Cordier</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Merci beaucoup à NOAN pour la création de mon site web, en tant que pâtissière il a réussi à créer un site web adapté à mon secteur d'activité !</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Shady</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Rapide et efficace, que demander de plus ?</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Marine Zablot</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Un grand merci à Noan pour son excellent travail ! Il est à l'écoute, très pro et rapide dans l'exécution. Je recommande fortement.</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Mathias Esteva</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Noan est quelqu'un de très sérieux et créatif. je recommande !</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Paul Kuntz</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Très à l'écoute, il a répondu à mes attentes rapidement et avec efficacité. Je recommande.</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Tim Barbelin</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Service rapide, efficace et tarifs corrects</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">tom portenier</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Du bon travail, top qualité !</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Edwin H</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Très bon boulot de la part de Noan. Efficace et ponctuel, il a su répondre à mon important cahier des charges et a apporté toutes les modifications souhaitées sur mon site. Je recommande !!</div>
+                        </div>
+                        <div class="avis-card">
+                            <div class="avis-header">
+                                <div class="avis-author">Maxime Miklas</div>
+                                <div class="avis-rating">
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="avis-text">Super agence web, Noan a créer mon site web et a optimiser mon référencement, suite à cela j'ai obtenu une augmentation significative de clients , je recommande !</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

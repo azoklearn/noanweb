@@ -115,101 +115,59 @@ window.addEventListener('load', () => {
 });
 
 // ========================================
-// PRELOADER ANIMATION - SYNCHRONISÉE
+// PRELOADER ANIMATION - Deux volets diagonaux
 // ========================================
-const PRELOADER_TRANSITION_DURATION = 500;
-const SCREEN_DELAY = 250; // Délai entre chaque écran
 
 // Activer le preloader au chargement
-document.body.classList.add('preloader-active');
+if (document.body) {
+    document.body.classList.add('preloader-active');
+} else {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (document.body) {
+            document.body.classList.add('preloader-active');
+        }
+    });
+}
 
 window.addEventListener("load", function() {
-    const TEST_DELAY = 500;
+    const preloader = document.getElementById("preloader");
     
-    setTimeout(() => {
-        const preloader = document.getElementById("preloader");
-        const logoPreloader = document.querySelector('.logo-preloader');
-        
-        if (preloader && logoPreloader) {
-            // Fade in du logo
-            logoPreloader.style.opacity = '0';
+    if (preloader) {
+        // Attendre un peu avant de faire glisser le fond
+        setTimeout(() => {
+            preloader.classList.add("hide");
+            
+            // Attendre la fin de l'animation pour afficher le contenu
             setTimeout(() => {
-                logoPreloader.style.transition = 'opacity 0.5s ease-in';
-                logoPreloader.style.opacity = '1';
-            }, 100);
-            
-            // Animation des écrans de couleur en synchronisation
-            const screens = preloader.querySelectorAll('.screen');
-            screens.forEach((screen, index) => {
-                setTimeout(() => {
-                    screen.style.transition = 'opacity 0.5s ease-out';
-                    screen.style.opacity = '0';
-                    setTimeout(() => {
-                        screen.classList.add("hide");
-                    }, 500);
-                }, index * SCREEN_DELAY);
-            });
-            
-            // Calculer le temps total (3 écrans × 250ms = 750ms + 500ms transition)
-            const totalAnimationTime = (screens.length - 1) * SCREEN_DELAY + 1000;
-            
-            // Fade out du logo avant de cacher le preloader
-            setTimeout(() => {
-                logoPreloader.style.transition = 'opacity 0.5s ease-out';
-                logoPreloader.style.opacity = '0';
-            }, totalAnimationTime - 500);
-            
-            setTimeout(() => {
-                preloader.classList.add("hide");
-                
-                // Attendre que le preloader soit complètement caché avant d'afficher le contenu
-                setTimeout(() => {
+                if (document.body) {
                     document.body.classList.remove('preloader-active');
                     document.body.classList.add('preloader-done');
-                    
-                    // Afficher le header après le gros logo
-                    setTimeout(() => {
-                        document.body.classList.add('hero-visible');
-                    }, 1500);
-                }, 500);
-            }, totalAnimationTime);
+                }
+            }, 1200);
+        }, 300);
+    } else {
+        // Si le preloader n'existe pas, afficher le contenu directement
+        if (document.body) {
+            document.body.classList.remove('preloader-active');
+            document.body.classList.add('preloader-done');
         }
-    }, TEST_DELAY);
+    }
 });
 
-// Fallback
+// Fallback - Forcer l'affichage après 2 secondes max
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(() => {
         const preloader = document.getElementById("preloader");
         if (preloader && !preloader.classList.contains("hide")) {
             preloader.classList.add("hide");
+        }
+        if (document.body) {
             document.body.classList.remove('preloader-active');
             document.body.classList.add('preloader-done');
         }
-    }, 8000);
+    }, 2000);
 });
 
-// ========================================
-// HEADER - SCROLL BEHAVIOR
-// ========================================
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.section-header');
-    
-    // Header scroll behavior - apparaît uniquement au scroll
-    if (header) {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                header.classList.add('visible');
-                header.classList.remove('bigger');
-            } else {
-                header.classList.remove('visible');
-            }
-        };
-        
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-    }
-});
 
 // ========================================
 // REVEAL ANIMATION - Hero Title
@@ -567,9 +525,100 @@ if (document.readyState === 'loading') {
 }
 
 // ========================================
+// HERO TEXT - DISPARITION LETTRE PAR LETTRE AU SCROLL
+// ========================================
+function initHeroTextDisappear() {
+    if (typeof gsap === 'undefined') {
+        return;
+    }
+    
+    const hasScrollTrigger = (typeof ScrollTrigger !== 'undefined' || typeof gsap.ScrollTrigger !== 'undefined');
+    if (!hasScrollTrigger) {
+        return;
+    }
+    
+    const heroSection = document.querySelector('.section-hero-accueil');
+    const heroText = document.querySelector('.hero-logo-big');
+    const seoText = document.querySelector('.seo-text');
+    
+    if (!heroSection || !heroText) return;
+    
+    // Fonction pour diviser le texte en lettres
+    function splitTextIntoLetters(element) {
+        if (element.dataset.lettersSplit === '1') return;
+        element.dataset.lettersSplit = '1';
+        
+        const originalText = element.textContent.trim();
+        element.textContent = '';
+        
+        const letters = originalText.split('').map((char, index) => {
+            const span = document.createElement('span');
+            span.className = 'hero-letter';
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.display = 'inline-block';
+            element.appendChild(span);
+            return span;
+        });
+        
+        return letters;
+    }
+    
+    // Diviser les textes en lettres
+    const heroLetters = splitTextIntoLetters(heroText);
+    const seoLetters = seoText ? splitTextIntoLetters(seoText) : null;
+    
+    // Animation de disparition pour le logo principal
+    if (heroLetters && heroLetters.length > 0) {
+        gsap.to(heroLetters, {
+            opacity: 0,
+            y: -50,
+            scale: 0.8,
+            stagger: 0.005,
+            ease: 'power4.in',
+            scrollTrigger: {
+                trigger: heroSection,
+                start: 'top top',
+                end: 'top+=100 top',
+                scrub: 0.1
+            }
+        });
+    }
+    
+    // Animation de disparition pour le texte SEO (plus rapide)
+    if (seoLetters && seoLetters.length > 0) {
+        gsap.to(seoLetters, {
+            opacity: 0,
+            y: -30,
+            scale: 0.9,
+            stagger: 0.003,
+            ease: 'power4.in',
+            scrollTrigger: {
+                trigger: heroSection,
+                start: 'top top',
+                end: 'top+=80 top',
+                scrub: 0.1
+            }
+        });
+    }
+}
+
+// Initialiser après le chargement
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        initHeroTextDisappear();
+    }, 100);
+});
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        initHeroTextDisappear();
+    }, 200);
+});
+
+// ========================================
 // PERFORMANCE - Désactiver les animations sur mobile si nécessaire
 // ========================================
-if (window.innerWidth < 768) {
+if (document.body && window.innerWidth < 768) {
     document.body.classList.add('mobile');
 }
 
@@ -580,12 +629,16 @@ let resizeTimer;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-        if (window.innerWidth < 768) {
-            document.body.classList.add('mobile');
-        } else {
-            document.body.classList.remove('mobile');
+        if (document.body) {
+            if (window.innerWidth < 768) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.remove('mobile');
+            }
         }
     }, 250);
 });
+
+
 
 console.log('✅ Noan Web - Site initialisé avec succès !');
