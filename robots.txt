@@ -1,12 +1,25 @@
-# robots.txt - NOAN WEB - Site Web Nancy
+# Robots.txt pour NOAN WEB - Webdesigner Nancy
+# Permet l'indexation complète du site par les moteurs de recherche
+
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
 # Sitemap
 Sitemap: https://noanweb.fr/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 10
+# Crawl-delay (optionnel, pour éviter la surcharge du serveur)
+Crawl-delay: 1
 
+# Désindexer les fichiers techniques si nécessaire
+Disallow: /bubble-menu.js
+Disallow: /folder.js
+Disallow: /script.js
+Disallow: /*.css$
+
+# Autoriser l'exploration des images
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
