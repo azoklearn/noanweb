@@ -611,9 +611,76 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Menu Hamburger - masqué par défaut */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animation du hamburger en X */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 @media (max-width: 991px) {
+    /* Afficher le hamburger sur mobile */
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    /* Navigation mobile - menu déroulant */
     .hero-navbar {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(2, 16, 36, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 2rem 2rem 2rem;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-navbar.active {
+        right: 0;
+    }
+    
+    .hero-navbar .nav-link {
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -2302,7 +2369,8 @@ body.hero-visible .section-header {
     }
     
     .about-image {
-        max-width: 250px !important;
+        max-width: 80% !important;
+        min-width: 300px !important;
         margin: 0 auto;
     }
     
@@ -2345,5 +2413,10 @@ body.hero-visible .section-header {
     
     .rating-number {
         font-size: 2rem !important;
+    }
+    
+    .about-image {
+        min-width: 280px !important;
+        max-width: 90% !important;
     }
 }

@@ -22,7 +22,7 @@
  * 5. Remplacez GOOGLE_PLACE_ID par votre Place ID (trouvable sur Google Maps)
  */
 
-const GOOGLE_PLACES_API_KEY = 'VOTRE_CLE_API_ICI';
+const GOOGLE_PLACES_API_KEY = 'AIzaSyDu7OtByU-uH0OBsfEe-7pko_VO0MQequE';
 const GOOGLE_PLACE_ID = '10213506924231430708';
 
 function loadGoogleReviews() {
@@ -30,7 +30,7 @@ function loadGoogleReviews() {
     if (!widget) return;
 
     // Vérifier si la clé API est configurée
-    if (!GOOGLE_PLACES_API_KEY || GOOGLE_PLACES_API_KEY === 'VOTRE_CLE_API_ICI') {
+    if (!GOOGLE_PLACES_API_KEY || GOOGLE_PLACES_API_KEY === 'AIzaSyDu7OtByU-uH0OBsfEe-7pko_VO0MQequE') {
         console.warn('Google Places API Key non configurée');
         widget.innerHTML = '<p style="color: rgba(255,255,255,0.7); text-align: center; padding: 2rem;">Pour afficher vos avis Google, vous devez :<br><br>1. Créer un projet sur <a href="https://console.cloud.google.com" target="_blank" style="color: #fff; text-decoration: underline;">Google Cloud Console</a><br>2. Activer l\'API "Places API"<br>3. Créer une clé API<br>4. Remplacer GOOGLE_PLACES_API_KEY dans google-reviews.js par votre clé</p>';
         return;
