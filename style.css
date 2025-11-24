@@ -2119,9 +2119,75 @@ body.hero-visible .section-header {
 
 .section-avis-google .title-medium {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: #1a1a1a;
     font-family: 'Montserrat', sans-serif;
+}
+
+.avis-intro {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.avis-header-box {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.google-maps-container {
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.google-maps-container iframe {
+    display: block;
+}
+
+.avis-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.avis-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.avis-google-link.primary {
+    background: #4285f4;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+.avis-google-link.primary:hover {
+    background: #3367d6;
+    transform: translateY(-3px);
+}
+
+.avis-google-link.secondary {
+    background: white;
+    color: #4285f4;
+    border: 2px solid #4285f4;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+.avis-google-link.secondary:hover {
+    background: #4285f4;
+    color: white;
+    transform: translateY(-3px);
 }
 
 .avis-stats {
@@ -2202,6 +2268,20 @@ body.hero-visible .section-header {
     object-fit: cover;
 }
 
+.avis-avatar-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4DA6FF, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: white;
+}
+
 .avis-author-info {
     flex: 1;
 }
@@ -2251,6 +2331,26 @@ body.hero-visible .section-header {
     color: #856404;
 }
 
+.avis-google-link {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #4285f4;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+.avis-google-link:hover {
+    background: #3367d6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+}
+
 /* Responsive Avis Google */
 @media (max-width: 768px) {
     .section-avis-google {
@@ -2264,6 +2364,26 @@ body.hero-visible .section-header {
     
     .rating-number {
         font-size: 2.5rem;
+    }
+    
+    .google-maps-container {
+        margin: 0 1rem 2rem 1rem;
+    }
+    
+    .google-maps-container iframe {
+        height: 350px !important;
+    }
+    
+    .avis-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .avis-google-link.primary,
+    .avis-google-link.secondary {
+        width: 100%;
+        text-align: center;
     }
 }
 

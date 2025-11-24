@@ -50,7 +50,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
-    <link rel="stylesheet" href="style.css?v=22">
+    <link rel="stylesheet" href="style.css?v=26">
     <link rel="stylesheet" href="bubble-menu.css">
     <link rel="stylesheet" href="folder.css">
     <link rel="stylesheet" href="color-bends.css">
@@ -262,16 +262,13 @@
     <section class="section-avis-google">
         <div class="container-large">
             <h2 class="title-medium scroll-fade">Avis Google</h2>
-            <div class="avis-stats scroll-fade">
-                                <div class="avis-rating">
-                    <span class="rating-number" id="rating-number">--</span>
-                    <div class="stars" id="rating-stars"></div>
-                    <span class="avis-count" id="avis-count">-- avis</span>
-                                </div>
-                            </div>
-            <div class="avis-grid scroll-fade" id="avis-container">
-                <!-- Les avis seront chargés ici via JavaScript -->
+            <div id="google-reviews" class="scroll-fade">
                 <div class="avis-loading">Chargement des avis...</div>
+                                </div>
+            <div class="avis-cta" style="margin-top: 2rem;">
+                <a href="https://g.page/r/CY7MbXa3ydeZ/review" target="_blank" class="avis-google-link">
+                    ⭐ Laisser un avis sur Google
+                </a>
                                 </div>
                             </div>
     </section>
@@ -616,94 +613,71 @@
     }
     </script>
 
-    <!-- Script pour charger les avis Google -->
+    <!-- Scripts -->
     <script>
-    // ⚠️ CONFIGURATION ⚠️
-    const GOOGLE_API_KEY = 'AIzaSyDu7OtByU-uH0OBsfEe-7pko_VO0MQequE';
-    const PLACE_ID = '10213506924231430708';
+    // === Configuration API Google ===
+    const placeId = "ChIJ9RM6IiKjlEcRroz2cLcp15k"; // Place ID noan.web
+    const apiKey = "AIzaSyDu7OtByU-uH0OBsfEe-7pko_VO0MQequE";
 
-    // Fonction pour générer les étoiles
-    function generateStars(rating) {
-        let stars = '';
-        for (let i = 1; i <= 5; i++) {
-            if (i <= rating) {
-                stars += '<span class="star filled">★</span>';
-            } else if (i - 0.5 <= rating) {
-                stars += '<span class="star half">★</span>';
-            } else {
-                stars += '<span class="star">☆</span>';
-            }
-        }
-        return stars;
-    }
-
-    // Fonction pour formater la date
-    function formatDate(timestamp) {
-        const date = new Date(timestamp * 1000);
-        const now = new Date();
-        const diffTime = Math.abs(now - date);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        
-        if (diffDays < 7) return 'Il y a quelques jours';
-        if (diffDays < 30) return 'Il y a quelques semaines';
-        if (diffDays < 365) return 'Il y a quelques mois';
-        return 'Il y a plus d\'un an';
-    }
-
-    // Charger les avis
+    // === Fonction pour charger les avis Google ===
     async function loadGoogleReviews() {
-        if (GOOGLE_API_KEY === 'VOTRE_CLE_API_GOOGLE_ICI' || PLACE_ID === 'VOTRE_PLACE_ID_ICI') {
-            document.getElementById('avis-container').innerHTML = 
-                '<div class="avis-error">⚠️ Veuillez configurer votre clé API Google et Place ID dans le fichier index.html (lignes 340-341)</div>';
-            return;
-        }
+        const container = document.getElementById("google-reviews");
+        if (!container) return;
+
+        const proxyUrl = "https://corsproxy.io/?";
+        const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,reviews,user_ratings_total&key=${apiKey}`;
 
         try {
-            const response = await fetch(
-                `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,rating,reviews,user_ratings_total&key=${GOOGLE_API_KEY}`
-            );
-            
+            const response = await fetch(proxyUrl + encodeURIComponent(url));
             const data = await response.json();
-            
-            if (data.status === 'OK' && data.result) {
-                const place = data.result;
-                
-                // Afficher la note globale
-                document.getElementById('rating-number').textContent = place.rating.toFixed(1);
-                document.getElementById('rating-stars').innerHTML = generateStars(place.rating);
-                document.getElementById('avis-count').textContent = `${place.user_ratings_total} avis`;
-                
-                // Afficher les avis
-                const avisContainer = document.getElementById('avis-container');
-                avisContainer.innerHTML = '';
-                
-                if (place.reviews && place.reviews.length > 0) {
-                    place.reviews.forEach(review => {
-                        const avisCard = document.createElement('div');
-                        avisCard.className = 'avis-card';
-                        avisCard.innerHTML = `
-                            <div class="avis-header">
-                                <img src="${review.profile_photo_url}" alt="${review.author_name}" class="avis-avatar">
-                                <div class="avis-author-info">
-                                    <div class="avis-author-name">${review.author_name}</div>
-                                    <div class="avis-date">${formatDate(review.time)}</div>
+
+            if (data.result && data.result.reviews) {
+                const r = data.result;
+                container.innerHTML = `
+                    <div class="avis-header-box">
+                        <h3 style="text-align:center;color:#1a1a1a;font-family:'Montserrat',sans-serif;font-size:1.8rem;margin-bottom:1rem;">⭐ Note moyenne</h3>
+                        <p style="text-align:center;font-size:1.2rem;color:#666;margin-bottom:0;">
+                            <strong style="color:#1a1a1a;font-size:3rem;">${r.rating}</strong> / 5
+                        </p>
+                        <p style="text-align:center;color:#666;font-size:1rem;margin-top:0.5rem;">
+                            Basé sur ${r.user_ratings_total} avis clients
+                        </p>
+                    </div>
+                    
+                    <div class="avis-grid">
+                        ${r.reviews.map(rv => `
+                            <div class="avis-card">
+                                <div class="avis-header">
+                                    <div class="avis-avatar-placeholder">
+                                        <span>${rv.author_name.charAt(0)}</span>
+                                    </div>
+                                    <div class="avis-author-info">
+                                        <div class="avis-author-name">${rv.author_name}</div>
+                                        <div class="avis-date">${rv.relative_time_description}</div>
+                                    </div>
                                 </div>
+                                <div class="avis-rating-stars">
+                                    ${'<span class="star filled">★</span>'.repeat(rv.rating)}${'<span class="star">☆</span>'.repeat(5 - rv.rating)}
+                                </div>
+                                <p class="avis-text">${rv.text || 'Aucun commentaire écrit'}</p>
                             </div>
-                            <div class="avis-rating-stars">${generateStars(review.rating)}</div>
-                            <p class="avis-text">${review.text}</p>
-                        `;
-                        avisContainer.appendChild(avisCard);
-                    });
-                } else {
-                    avisContainer.innerHTML = '<div class="avis-empty">Aucun avis disponible pour le moment.</div>';
-                }
+                        `).join('')}
+                    </div>
+                `;
             } else {
-                throw new Error(data.status);
+                container.innerHTML = `
+                    <div class="avis-error">
+                        <p>Aucun avis disponible pour le moment.</p>
+                    </div>
+                `;
             }
         } catch (error) {
-            console.error('Erreur lors du chargement des avis:', error);
-            document.getElementById('avis-container').innerHTML = 
-                '<div class="avis-error">Impossible de charger les avis pour le moment.</div>';
+            console.error("Erreur lors du chargement des avis:", error);
+            container.innerHTML = `
+                <div class="avis-error">
+                    <p>Impossible de charger les avis. <a href="https://www.google.com/maps/place/noan.web" target="_blank" style="color:#4285f4;text-decoration:underline;">Voir sur Google Maps</a></p>
+                </div>
+            `;
         }
     }
 
