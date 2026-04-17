@@ -35,7 +35,7 @@ const CARD_ITEMS = [
     title: 'Machiavelli.',
     number: '01',
     href: 'https://www.machiavelliwatches.com/',
-    icon: 'https://noanweb.com/_next/image?url=%2Flogowatch.jpg&w=384&q=75&dpl=dpl_AukVukEuatrA2zkiT5r5z64KtRqD',
+    icon: 'https://www.machiavelliwatches.com/aeje.jpg',
     items: [
       'Design élégant et minimaliste',
       'E-commerce haute performance',
@@ -47,7 +47,7 @@ const CARD_ITEMS = [
     title: 'BlaBlaRun Club.',
     number: '02',
     href: 'https://blablarunclubnancy.netlify.app/',
-    icon: 'https://noanweb.com/_next/image?url=%2Fblablarun.png&w=384&q=75&dpl=dpl_AukVukEuatrA2zkiT5r5z64KtRqD',
+    icon: 'https://blablarunclubnancy.netlify.app/assets/logo.jpeg',
     items: [
       'Site du club de course à pied de Nancy',
       'Footing ouvert à tous chaque mardi place Stanislas',
@@ -58,7 +58,7 @@ const CARD_ITEMS = [
     title: 'Horeva.',
     number: '03',
     href: 'https://www.montrehoreva.fr/',
-    icon: 'https://noanweb.com/_next/image?url=%2Fhoreva.jpeg&w=384&q=75&dpl=dpl_AukVukEuatrA2zkiT5r5z64KtRqD',
+    icon: 'https://montrehoreva.com/_next/image?url=%2Flogoblanc.jpeg&w=384&q=75&dpl=dpl_BvGp8cDpPSKJXaQ2JiFM14kTN4Va',
     items: [
       'Site e-commerce premium pour la vente de montres de luxe de seconde main',
       'Catalogue de pièces authentifiées, design élégant et moderne',
