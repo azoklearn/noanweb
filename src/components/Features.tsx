@@ -65,6 +65,50 @@ const CARD_ITEMS = [
       'Expérience d\'achat sécurisée pour les collectionneurs et amateurs de montres haut de gamme',
     ],
   },
+  {
+    title: 'Demco Quartz.',
+    number: '04',
+    href: 'https://maquettedemcoquartz.vercel.app/',
+    icon: 'https://maquettedemcoquartz.vercel.app/logo.jpg',
+    items: [
+      'Landing page horlogerie moderne',
+      'Design épuré mettant en valeur les montres',
+      'Identité visuelle forte et cohérente',
+    ],
+  },
+  {
+    title: 'Dimen Sourcing.',
+    number: '05',
+    href: 'https://maquettedimen.vercel.app/',
+    icon: 'https://maquettedimen.vercel.app/logo.jpeg',
+    items: [
+      'Site vitrine professionnel',
+      'Design soigné et responsive',
+      'Expérience utilisateur fluide',
+    ],
+  },
+  {
+    title: 'TIB Geneva.',
+    number: '06',
+    href: 'https://maquettetibgeneva.vercel.app/',
+    icon: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHrXK74vG83zN2eR6343qD8Uay7XqCh5IvThPrqh8uwxnPAlRLUP0MtX8PivdsLKtCcmuQo3AO9Iv9lhztO8JWL77DwkeYyAIuAyRRiFI0xTQKuItYAqET9KD7zNvsrIFZXnvIo=s1360-w1360-h1020-rw',
+    items: [
+      'Site pour une marque genevoise haut de gamme',
+      'Design luxueux et minimaliste',
+      'Présence digitale raffinée',
+    ],
+  },
+  {
+    title: 'MBM Conciergerie.',
+    number: '07',
+    href: 'https://tictac-pearl.vercel.app/',
+    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLglTfl4_6agIhj5ec2dw3t-pXYDZfcrWjQ&s',
+    items: [
+      'Site de conciergerie de luxe',
+      'Services haut de gamme sur mesure',
+      'Interface élégante et rassurante',
+    ],
+  },
 ]
 
 export default function Features() {
@@ -91,9 +135,9 @@ export default function Features() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2 md:gap-1 lg:h-[480px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2 md:gap-1">
           {/* Card 1 — Video */}
-          <ProjectCard index={0} className="relative h-64 md:h-auto">
+          <ProjectCard index={0} className="relative h-64 lg:h-[240px]">
             <video
               src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_133058_0504132a-0cf3-4450-a370-8ea3b05c95d4.mp4"
               autoPlay
@@ -110,7 +154,7 @@ export default function Features() {
             </div>
           </ProjectCard>
 
-          {/* Cards 2, 3, 4 */}
+          {/* Project cards */}
           {CARD_ITEMS.map((card, i) => (
             <ProjectCard
               key={card.number}
