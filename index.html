@@ -1,21 +1,521 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noanweb — Web Design & Développement</title>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Noan WEB — Studio de Web Design Premium à Nancy</title>
+<meta name="description" content="Noan WEB — Studio de web design premium à Nancy. Sites vitrine, e-commerce, SEO. Des expériences digitales sur-mesure qui convertissent." />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Instrument+Serif:ital@1&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500&family=VT323&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Noise overlay -->
+<div class="noise"></div>
+
+<!-- Gradient blobs -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span>Noan B.</span>
+      <span class="nav-sep">|</span>
+      <span><em class="nav-accent">Conversion-first</em> web design studio</span>
+    </div>
+    <div class="nav-links">
+      <a href="#work" data-hover>Works</a>
+      <a href="#services" data-hover>Services</a>
+      <a href="#about" data-hover>About</a>
+      <a href="#contact" data-hover>Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta" data-hover>
+      <span>Book a Call</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="hero.jpg" alt="">
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="hero-organic" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.009" numOctaves="3" seed="7" result="noise">
+        <animate attributeName="seed" values="7;42;19;88;7" dur="14s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="240" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <div class="hero-content">
+  <div class="hero-meta-grid">
+    <p class="hero-meta-text hero-meta-left">
+      Basé à <strong>Nancy</strong>, je suis <strong>Noan</strong>, web designer & développeur avec une obsession du détail et du résultat business.
+    </p>
+    <p class="hero-meta-text hero-meta-right">
+      Avec une connaissance pointue du design et des leviers de conversion, je crée des sites qui marquent et qui transforment.
+    </p>
+  </div>
+
+  <h1 class="hero-bigname" aria-label="Noan Web">noanWeb</h1>
+  </div>
+</section>
+
+<!-- TRUSTED BAND (out of hero) -->
+<section class="trusted-band">
+  <div class="hero-trusted">
+    <div class="trusted-marquee">
+      <div class="trusted-track">
+        <a href="https://machiavelliwatches.com" target="_blank" rel="noopener" class="trusted-item is-color"><img src="https://www.machiavelliwatches.com/aeje.jpg" alt="Machiavelli Watches" loading="lazy"></a>
+        <a href="https://scentor.vercel.app" target="_blank" rel="noopener" class="trusted-item is-wide">SCENTOR</a>
+        <a href="https://paris-pearl.vercel.app" target="_blank" rel="noopener" class="trusted-item is-serif is-italic">Paris Pearl</a>
+        <a href="https://movento.dev" target="_blank" rel="noopener" class="trusted-item"><img src="https://movento.dev/logo.png" alt="Movento" loading="lazy"></a>
+        <a href="https://uniqwrist.vercel.app" target="_blank" rel="noopener" class="trusted-item"><img src="https://uniqwrist.vercel.app/logo.png" alt="Uniqwrist" loading="lazy"></a>
+        <a href="https://jl-paysage.vercel.app" target="_blank" rel="noopener" class="trusted-item"><img src="https://jl-paysage.vercel.app/logo.png" alt="JL Paysage" loading="lazy"></a>
+        <a href="https://www.asnl.net" target="_blank" rel="noopener" class="trusted-item is-color"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/AS_Nancy_logo.svg/250px-AS_Nancy_logo.svg.png" alt="AS Nancy-Lorraine" loading="lazy"></a>
+        <a href="https://blablarunclubnancy.netlify.app" target="_blank" rel="noopener" class="trusted-item is-color"><img src="https://blablarunclubnancy.netlify.app/assets/logo.jpeg" alt="BlablaRun Nancy" loading="lazy"></a>
+        <a href="https://eternelle-six.vercel.app" target="_blank" rel="noopener" class="trusted-item"><img src="https://eternelle-six.vercel.app/logo.png" alt="Eternelle" loading="lazy"></a>
+        <a href="https://coiffure-rouge.vercel.app" target="_blank" rel="noopener" class="trusted-item is-wide">PRESTIGE</a>
+        <a href="https://2121-rust.vercel.app" target="_blank" rel="noopener" class="trusted-item"><img src="https://2121-rust.vercel.app/logo.png" alt="2121" loading="lazy"></a>
+
+        <a href="https://machiavelliwatches.com" target="_blank" rel="noopener" class="trusted-item is-color" aria-hidden="true"><img src="https://www.machiavelliwatches.com/aeje.jpg" alt="" loading="lazy"></a>
+        <a href="https://scentor.vercel.app" target="_blank" rel="noopener" class="trusted-item is-wide" aria-hidden="true">SCENTOR</a>
+        <a href="https://paris-pearl.vercel.app" target="_blank" rel="noopener" class="trusted-item is-serif is-italic" aria-hidden="true">Paris Pearl</a>
+        <a href="https://movento.dev" target="_blank" rel="noopener" class="trusted-item" style="font-weight:700" aria-hidden="true">Movento</a>
+        <a href="https://uniqwrist.vercel.app" target="_blank" rel="noopener" class="trusted-item" aria-hidden="true"><img src="https://uniqwrist.vercel.app/logo.png" alt="" loading="lazy"></a>
+        <a href="https://jl-paysage.vercel.app" target="_blank" rel="noopener" class="trusted-item" aria-hidden="true"><img src="https://jl-paysage.vercel.app/logo.png" alt="" loading="lazy"></a>
+        <a href="https://www.asnl.net" target="_blank" rel="noopener" class="trusted-item is-color" aria-hidden="true"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/AS_Nancy_logo.svg/250px-AS_Nancy_logo.svg.png" alt="" loading="lazy"></a>
+        <a href="https://blablarunclubnancy.netlify.app" target="_blank" rel="noopener" class="trusted-item is-color" aria-hidden="true"><img src="https://blablarunclubnancy.netlify.app/assets/logo.jpeg" alt="" loading="lazy"></a>
+        <a href="https://eternelle-six.vercel.app" target="_blank" rel="noopener" class="trusted-item" aria-hidden="true"><img src="https://eternelle-six.vercel.app/logo.png" alt="" loading="lazy"></a>
+        <a href="https://coiffure-rouge.vercel.app" target="_blank" rel="noopener" class="trusted-item is-wide" aria-hidden="true">PRESTIGE</a>
+        <a href="https://2121-rust.vercel.app" target="_blank" rel="noopener" class="trusted-item" aria-hidden="true"><img src="https://2121-rust.vercel.app/logo.png" alt="" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="section-head">
+    <span class="section-eyebrow">— Réalisations</span>
+    <h2 class="section-title">
+      Des sites pensés <em class="italic">pixel par pixel.</em>
+    </h2>
+    <p class="section-sub">Une sélection de projets récents. Chaque site est unique, conçu pour son audience et optimisé pour convertir.</p>
+  </div>
+
+  <div class="projects">
+
+    <a href="https://machiavelliwatches.com" target="_blank" class="project" data-color="#D97757" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://machiavelliwatches.com" loading="lazy" title="Machiavelli Watches"></iframe>
+          <div class="project-overlay">
+            <span class="project-visit">Visiter le site ↗</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">01</span>
+          <span class="project-tag">E-commerce · Horlogerie</span>
+        </div>
+        <h3 class="project-name">Machiavelli Watches</h3>
+        <p class="project-desc">Boutique en ligne premium pour marque d'horlogerie. Direction artistique, UI sur-mesure et tunnel d'achat optimisé.</p>
+      </div>
+    </a>
+
+    <a href="https://scentor.vercel.app/" target="_blank" class="project" data-color="#8B5CF6" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://scentor.vercel.app/" loading="lazy" title="Scentor"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">02</span>
+          <span class="project-tag">Vitrine · Nancy · En cours</span>
+        </div>
+        <h3 class="project-name">Scentor</h3>
+        <p class="project-desc">Collaboration locale en cours. Identité digitale raffinée pour une marque nancéienne en pleine ascension.</p>
+      </div>
+    </a>
+
+    <a href="https://paris-pearl.vercel.app/" target="_blank" class="project" data-color="#EC4899" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://paris-pearl.vercel.app/" loading="lazy" title="Paris Pearl"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">03</span>
+          <span class="project-tag">E-commerce · Joaillerie</span>
+        </div>
+        <h3 class="project-name">Paris Pearl</h3>
+        <p class="project-desc">Bijouterie en ligne avec une esthétique parisienne moderne. Élégance, finesse et performance.</p>
+      </div>
+    </a>
+
+    <a href="https://2121-rust.vercel.app/" target="_blank" class="project" data-color="#10B981" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://2121-rust.vercel.app/" loading="lazy" title="2121"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">04</span>
+          <span class="project-tag">Concept · Direction artistique</span>
+        </div>
+        <h3 class="project-name">2121</h3>
+        <p class="project-desc">Projet expérimental futuriste — exploration typographique et motion design pour repousser les standards.</p>
+      </div>
+    </a>
+
+    <a href="https://movento.dev/" target="_blank" class="project" data-color="#F59E0B" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://movento.dev/" loading="lazy" title="Movento"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">05</span>
+          <span class="project-tag">Vitrine · SaaS</span>
+        </div>
+        <h3 class="project-name">Movento</h3>
+        <p class="project-desc">Landing page haute conversion pour un SaaS en mouvement. Animations fluides et copy percutant.</p>
+      </div>
+    </a>
+
+    <a href="https://uniqwrist.vercel.app/" target="_blank" class="project" data-color="#06B6D4" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://uniqwrist.vercel.app/" loading="lazy" title="Uniqwrist"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">06</span>
+          <span class="project-tag">E-commerce · Accessoires</span>
+        </div>
+        <h3 class="project-name">Uniqwrist</h3>
+        <p class="project-desc">E-shop épuré pour bracelets de luxe. Expérience produit immersive et UX impeccable.</p>
+      </div>
+    </a>
+
+    <a href="https://jl-paysage.vercel.app/" target="_blank" class="project" data-color="#84CC16" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://jl-paysage.vercel.app/" loading="lazy" title="JL Paysage"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">07</span>
+          <span class="project-tag">Vitrine · Artisan</span>
+        </div>
+        <h3 class="project-name">JL Paysage</h3>
+        <p class="project-desc">Site vitrine pour paysagiste — mettre en valeur le savoir-faire local avec une présence digitale soignée.</p>
+      </div>
+    </a>
+
+    <a href="https://darsushiii.vercel.app/" target="_blank" class="project" data-color="#EF4444" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://darsushiii.vercel.app/" loading="lazy" title="Darsushi"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">08</span>
+          <span class="project-tag">Restaurant · Vitrine</span>
+        </div>
+        <h3 class="project-name">Darsushi</h3>
+        <p class="project-desc">Identité digitale appétissante pour restaurant japonais. Menu, réservation et ambiance.</p>
+      </div>
+    </a>
+
+    <a href="https://angelo-self.vercel.app/" target="_blank" class="project" data-color="#A855F7" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://angelo-self.vercel.app/" loading="lazy" title="Angelo"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">09</span>
+          <span class="project-tag">Portfolio · Personnel</span>
+        </div>
+        <h3 class="project-name">Angelo</h3>
+        <p class="project-desc">Portfolio personnel — design distinctif pour se démarquer dans un secteur saturé.</p>
+      </div>
+    </a>
+
+    <a href="https://eternelle-six.vercel.app/" target="_blank" class="project" data-color="#F472B6" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://eternelle-six.vercel.app/" loading="lazy" title="Eternelle"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">10</span>
+          <span class="project-tag">Vitrine · Lifestyle</span>
+        </div>
+        <h3 class="project-name">Eternelle</h3>
+        <p class="project-desc">Univers lifestyle féminin — design délicat, palette chaude et storytelling visuel.</p>
+      </div>
+    </a>
+
+    <a href="https://coiffure-rouge.vercel.app/" target="_blank" class="project" data-color="#DC2626" data-hover>
+      <div class="project-visual">
+        <div class="project-frame">
+          <iframe src="https://coiffure-rouge.vercel.app/" loading="lazy" title="Coiffure Rouge"></iframe>
+          <div class="project-overlay"><span class="project-visit">Visiter le site ↗</span></div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-num">11</span>
+          <span class="project-tag">Vitrine · Salon</span>
+        </div>
+        <h3 class="project-name">Coiffure Rouge</h3>
+        <p class="project-desc">Salon de coiffure — site élégant avec prise de rendez-vous intégrée et SEO local.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-head">
+    <span class="section-eyebrow">— Services</span>
+    <h2 class="section-title">
+      Ce que <em class="italic">je fais</em> pour vous.
+    </h2>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card" data-color="#D97757">
+      <div class="service-num">01</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="32" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 16h40M10 12h.01M14 12h.01M18 12h.01" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <h3>Sites vitrine</h3>
+      <p>Présence digitale soignée pour artisans, professions libérales, marques locales. Design sur-mesure, performant et référencé.</p>
+      <ul class="service-list">
+        <li>Design unique</li>
+        <li>Mobile-first</li>
+        <li>SEO local intégré</li>
+        <li>Animations sur-mesure</li>
+      </ul>
+    </div>
+
+    <div class="service-card" data-color="#8B5CF6">
+      <div class="service-num">02</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M8 14h32l-3 22a4 4 0 01-4 4H15a4 4 0 01-4-4L8 14z" stroke="currentColor" stroke-width="1.5"/><path d="M16 14V10a8 8 0 0116 0v4" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <h3>E-commerce</h3>
+      <p>Boutiques en ligne premium qui transforment. Tunnel optimisé, paiement, gestion produits et expérience d'achat fluide.</p>
+      <ul class="service-list">
+        <li>Shopify / sur-mesure</li>
+        <li>Conversion optimisée</li>
+        <li>Paiement sécurisé</li>
+        <li>Analytics intégré</li>
+      </ul>
+    </div>
+
+    <div class="service-card" data-color="#10B981">
+      <div class="service-num">03</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="22" cy="22" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M42 42l-10-10" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <h3>Référencement SEO</h3>
+      <p>Apparaissez en première page de Google. Audit technique, optimisation on-page, SEO local pour attirer vos clients.</p>
+      <ul class="service-list">
+        <li>Audit complet</li>
+        <li>SEO technique</li>
+        <li>Contenu optimisé</li>
+        <li>Suivi de positions</li>
+      </ul>
+    </div>
+
+    <div class="service-card" data-color="#F59E0B">
+      <div class="service-num">04</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4v40M4 24h40M10 10l28 28M38 10L10 38" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <h3>Direction artistique</h3>
+      <p>Identité visuelle, charte graphique, direction créative. Un univers cohérent qui vous différencie de la concurrence.</p>
+      <ul class="service-list">
+        <li>Logo & identité</li>
+        <li>Charte graphique</li>
+        <li>Univers visuel</li>
+        <li>Brand guidelines</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-head">
+    <span class="section-eyebrow">— Process</span>
+    <h2 class="section-title">
+      Du brief à la <em class="italic">mise en ligne.</em>
+    </h2>
+  </div>
+
+  <div class="process-steps">
+    <div class="process-step">
+      <span class="step-num">01</span>
+      <div class="step-content">
+        <h4>Découverte</h4>
+        <p>On échange sur votre projet, vos objectifs et votre audience. Audit de l'existant si besoin.</p>
+      </div>
+      <span class="step-time">Semaine 1</span>
+    </div>
+
+    <div class="process-step">
+      <span class="step-num">02</span>
+      <div class="step-content">
+        <h4>Design</h4>
+        <p>Maquettes Figma — direction artistique, wireframes, prototypes interactifs. Allers-retours jusqu'à validation.</p>
+      </div>
+      <span class="step-time">Semaine 2-3</span>
+    </div>
+
+    <div class="process-step">
+      <span class="step-num">03</span>
+      <div class="step-content">
+        <h4>Développement</h4>
+        <p>Intégration propre, performante, animée. Code maintenable, optimisé SEO et accessibilité.</p>
+      </div>
+      <span class="step-time">Semaine 3-5</span>
+    </div>
+
+    <div class="process-step">
+      <span class="step-num">04</span>
+      <div class="step-content">
+        <h4>Lancement</h4>
+        <p>Mise en ligne, formation, suivi. Vous êtes autonome — je reste disponible pour les évolutions.</p>
+      </div>
+      <span class="step-time">Semaine 6</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-left">
+      <span class="section-eyebrow">— À propos</span>
+      <h2 class="about-title">
+        Studio indépendant basé à <em class="italic">Nancy.</em>
+      </h2>
+      <p class="about-text">
+        Noan WEB c'est avant tout une obsession du détail. Chaque pixel compte, chaque animation a une raison d'être, chaque ligne de code est optimisée.
+      </p>
+      <p class="about-text">
+        Je travaille en direct avec mes clients, sans intermédiaires. Vous parlez à la personne qui dessine, qui code, qui livre. Résultat&nbsp;: des projets plus rapides, plus précis, plus alignés.
+      </p>
+    </div>
+
+    <div class="about-right">
+      <div class="stat">
+        <span class="stat-num" data-target="40">0</span>
+        <span class="stat-plus">+</span>
+        <span class="stat-label">Projets livrés</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="100">0</span>
+        <span class="stat-plus">%</span>
+        <span class="stat-label">Sur-mesure</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="6">0</span>
+        <span class="stat-plus">sem</span>
+        <span class="stat-label">Délai moyen</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Soin du détail</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <span class="section-eyebrow">— Et maintenant ?</span>
+    <h2 class="contact-title">
+      On <em class="italic accent-coral">construit</em><br>
+      quelque chose <em class="italic accent-violet">d'inoubliable</em> ?
+    </h2>
+    <p class="contact-sub">Un projet, une idée, un brief — écrivez-moi. Réponse sous 24h.</p>
+
+    <div class="contact-actions">
+      <a href="mailto:contact@noanweb.fr" class="btn btn-primary btn-large" data-hover>
+        <span>contact@noanweb.fr</span>
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="contact-links">
+      <a href="#" data-hover>Instagram ↗</a>
+      <a href="#" data-hover>LinkedIn ↗</a>
+      <a href="#" data-hover>Behance ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">◐</span>
+      <span>Noan<em>WEB</em></span>
+    </div>
+    <div class="footer-info">
+      <span>Nancy, France · 54000</span>
+      <span>© 2026 Noan WEB. Tous droits réservés.</span>
+    </div>
+    <div class="footer-time" id="footer-time">--:--:--</div>
+  </div>
+  <div class="footer-mega">NOAN WEB</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
